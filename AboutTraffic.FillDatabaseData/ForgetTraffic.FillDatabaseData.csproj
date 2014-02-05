@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9ACF0E21-9807-4DA2-99A3-F6C5313FDB88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ForgetTraffic.FillDatabaseData</RootNamespace>
+    <AssemblyName>ForgetTraffic.FillDatabaseData</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="StatusXmlWritter.cs" />
+    <Compile Include="ITableOperation.cs" />
+    <Compile Include="PopulateStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserPopulate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ForgetTraffic.DAL\ForgetTraffic.DAL.csproj">
+      <Project>{2C207E0D-E9D9-4501-94BC-149C1EAD2E5F}</Project>
+      <Name>ForgetTraffic.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.DataModel\ForgetTraffic.DataModel.csproj">
+      <Project>{758CEAC4-52F6-4298-BC8A-56A62A028A9A}</Project>
+      <Name>ForgetTraffic.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.ServiceUtils\ForgetTraffic.ServiceUtils.csproj">
+      <Project>{2A84B387-1BA6-4399-9328-C3821F418279}</Project>
+      <Name>ForgetTraffic.ServiceUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XmlFiles\InitialFill\FillStatusData.xml" />
+    <Content Include="XmlFiles\InitialFill\FillUsersData.xml" />
+    <Content Include="XmlFiles\InitialFill\statusPerfil.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="XmlFiles\SaveBDLocal\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C207E0D-E9D9-4501-94BC-149C1EAD2E5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ForgetTraffic.DAL</RootNamespace>
+    <AssemblyName>ForgetTraffic.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="StructureMap, Version=2.5.3.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>resources\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conctracts\IRepository.cs" />
+    <Compile Include="Conctracts\IUnitOfWork .cs" />
+    <Compile Include="Conctracts\IUnitOfWorkFactory.cs" />
+    <Compile Include="EFRepository\EFRepository.cs" />
+    <Compile Include="EFRepository\EfUnitOfWork.cs.cs" />
+    <Compile Include="EFRepository\EFUnitOfWorkFactory .cs" />
+    <Compile Include="EFRepository\UnitOfWork.cs" />
+    <Compile Include="EntitiesManagers\ActionManager.cs" />
+    <Compile Include="EntitiesManagers\Permition.cs" />
+    <Compile Include="EntitiesManagers\RoleManager.cs" />
+    <Compile Include="EntitiesManagers\ConfigurationManager.cs" />
+    <Compile Include="EntitiesManagers\EntitiesExceptions.cs" />
+    <Compile Include="EntitiesManagers\GeneralManager.cs" />
+    <Compile Include="EntitiesManagers\IncidenceManager.cs" />
+    <Compile Include="EntitiesManagers\IncidentTypeMananger.cs" />
+    <Compile Include="EntitiesManagers\IncidentVoteManager.cs" />
+    <Compile Include="EntitiesManagers\SeverityManager.cs" />
+    <Compile Include="EntitiesManagers\StatusManager.cs" />
+    <Compile Include="EntitiesManagers\CountryManager.cs" />
+    <Compile Include="EntitiesManagers\UserManager.cs" />
+    <Compile Include="EntitiesManagers\UserProfileManager.cs" />
+    <Compile Include="EntitiesManagers\UserProviderMananger.cs" />
+    <Compile Include="EntitiesManagers\ValidationTokenManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\StructureMap.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ForgetTraffic.DataModel\ForgetTraffic.DataModel.csproj">
+      <Project>{758CEAC4-52F6-4298-BC8A-56A62A028A9A}</Project>
+      <Name>ForgetTraffic.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.DataTypes\ForgetTraffic.DataTypes.csproj">
+      <Project>{F60C4631-CF0D-4ABC-A76B-554B4E743A28}</Project>
+      <Name>ForgetTraffic.DataTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.Logger\ForgetTraffic.Logger.csproj">
+      <Project>{E429A5C4-51BC-4C72-94F1-9C473E385049}</Project>
+      <Name>ForgetTraffic.Logger</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Code\Facebook.cshtml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

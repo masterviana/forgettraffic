@@ -1,0 +1,1290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="3d1a4293-7d2e-48fd-8a19-ec6b0156302a"
+  name="ForgetTraffic.ModelLayer" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="beb7397f-7ea6-471e-b9a5-b696b3c851d9"
+        name="Incidência"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ec23dd13-408f-414a-9c01-5f6a7ad18733"
+            isDerived="false"
+            sourceEndRoleName="Incidência"
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b255fc44-99d8-4ae9-941e-b6b6f784e0cc"
+              LastKnownName="Activa"
+              LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4bee6e42-8407-4064-883c-0acef0538c5a"
+                  name="Incidência"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="78575d14-ac9a-4093-89b2-b7e7ae8f6c6a"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b255fc44-99d8-4ae9-941e-b6b6f784e0cc"
+        name="Activa"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3c194a9c-c7b8-4c8d-bd8d-cb633728b1b4"
+        name="Activa1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="8648f43d-194d-4896-bf56-fd566553c4d6"
+        name="Sequence1"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <lifelines>
+          <lifeline
+            Id="347c63b7-d274-40cf-b123-fbc5a2700690"
+            name="Lifeline1"
+            isActor="false"
+            lifelineDisplayName="Lifeline1" />
+          <lifeline
+            Id="33f03bd8-b445-4497-9b22-0a8f5c395812"
+            name="Lifeline2"
+            isActor="false"
+            lifelineDisplayName="Lifeline2" />
+        </lifelines>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="24cbb16b-d063-4c9d-ad14-bda6f787c568"
+        name="Actor1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c38f0daa-1bd3-4c27-96b2-0718f6f2f3ca"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d9ccdac8-679f-4627-a270-c22c6cb18106"
+        name="Class2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="61e60bd3-7641-4ae5-81c7-1eca69bb6031"
+        name="Class3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="713d1c3a-321b-42ea-a7dc-53a53b67c4ef"
+        name="IncidentItem"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="b7d42cd2-9410-4352-9e73-eeaf6aea37c3"
+            isSubstitutable="false">
+            <classMoniker
+              Id="2c810ba4-7941-4498-a552-0389e4946418"
+              LastKnownName="OverlyItem"
+              LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f4ce59af-3e3c-4ae0-88a3-7ede8cdcc406"
+            name="GetIncident"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5312d31c-956e-45e4-a911-c269a4f8ede2"
+            name="GetType"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2c810ba4-7941-4498-a552-0389e4946418"
+        name="OverlyItem"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="379c902c-6459-4743-9c2e-936585e572f2"
+        name="ItemizedOverLay"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="c9fee71c-41b2-4768-b793-f2fde4d66ed1"
+            name="CreateItem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="03b44290-3633-4857-8633-c07933aead20"
+                  name="int i"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1ffdd27a-bee1-4470-8cc6-4945b0caf88b"
+            name="Size"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0373e86a-d8d1-4a59-b296-f01b649a1a55"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f182bb4c-9a34-43b0-bd02-b9544d2ff7da"
+                      LastKnownName="int"
+                      LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3296410a-3cda-433c-9281-dd82ea151904"
+        name="IncidentOverLay"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="96cc5d8d-d4a6-4eed-84ea-d67226814239"
+            isSubstitutable="false">
+            <classMoniker
+              Id="379c902c-6459-4743-9c2e-936585e572f2"
+              LastKnownName="ItemizedOverLay"
+              LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="bb628b82-d5b1-44df-a87b-c9a79c30ca88"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="713d1c3a-321b-42ea-a7dc-53a53b67c4ef"
+              LastKnownName="IncidentItem"
+              LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="da9ac1fe-0b3e-44e2-a84c-0b466c33b726"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6606f7fc-d6e0-4b57-a265-15f37129e0a9"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b2747c93-49a3-4569-88d7-a633df2268e9"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8ed3f7f5-9b77-481d-8c91-10225e19b28f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6eee5599-b86d-4f6e-b621-7b033fc04fe9"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2e7d7c5b-ce86-432f-a9b5-8c29cc9f968c"
+              LastKnownName="MainMap"
+              LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c3f4ac0e-8da4-4859-a3b6-630b8c648e8c"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1e55a098-98f3-41dd-961f-f8dba9e65957"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="15a0f1d0-f6e2-4d65-8250-302a193455de"
+            name="CreateItem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="37eac20d-1f2f-4d7f-b936-6a349943027d"
+                  name="int i"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1063babd-aa1d-4076-b640-cbf90cf75afc"
+            name="Size"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cf3a67ba-f047-42e2-9848-0b5f4b6515bc"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f182bb4c-9a34-43b0-bd02-b9544d2ff7da"
+                      LastKnownName="int"
+                      LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="f182bb4c-9a34-43b0-bd02-b9544d2ff7da"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2e7d7c5b-ce86-432f-a9b5-8c29cc9f968c"
+        name="MainMap"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="fa2248e0-a14e-46da-812e-809426e76f07"
+        name="Sequence1"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="4663289a-c0fd-4003-afe0-674266733de0"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+                LastKnownName="Resource"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="47e7d164-de74-4406-a93f-75771717fde8"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="76c0469e-1df6-4504-bd09-3375e7ce55f9"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="55ae8eef-8867-4c08-8ea6-337e93d5716c"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4ad1522a-f2a5-49fb-810a-b8070253373b"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="76c0469e-1df6-4504-bd09-3375e7ce55f9"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c332a37d-840e-4406-b2bb-90015e5c4fe2"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+                LastKnownName="Resource"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="52c1dfc6-33fe-4d0e-9e18-40554052df0d"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="3bf28e54-cd6f-4e63-96b2-1e35eceafd10"
+                LastKnownName="ThreadRequest"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="55ae8eef-8867-4c08-8ea6-337e93d5716c"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+                LastKnownName="Resource"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4ad1522a-f2a5-49fb-810a-b8070253373b"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+                LastKnownName="Resource"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6e4b8385-5415-4328-bb3c-68e9a8b1146d"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="3bf28e54-cd6f-4e63-96b2-1e35eceafd10"
+                LastKnownName="ThreadRequest"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="47e7d164-de74-4406-a93f-75771717fde8"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="96d4b96b-da10-4205-b5fb-e18a7abadf82"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+                LastKnownName="Resource"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="a0074d3c-dab7-4205-b8df-a4b16692b163"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+                LastKnownName="Resource"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="15565fd5-f381-47df-b93e-8961f6e43142"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="39871552-eaf8-401e-aea0-22cfc8d7af6c"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="15ff5c65-5742-4602-bab7-449428fbab07"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d8e3799e-ba4c-4703-bc42-bf295f6ef6f1"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="39871552-eaf8-401e-aea0-22cfc8d7af6c"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b02e34e9-4d3e-4dad-8e87-6051d40dded0"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+                LastKnownName="Resource"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="15ff5c65-5742-4602-bab7-449428fbab07"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+                LastKnownName="Resource"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ebbead26-b74b-42d3-9905-9fd617845bb2"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="3bf28e54-cd6f-4e63-96b2-1e35eceafd10"
+                LastKnownName="ThreadRequest"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d8e3799e-ba4c-4703-bc42-bf295f6ef6f1"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+                LastKnownName="Resource"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e5d31fb0-b4cf-4f79-bd30-342e6dad691c"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="3bf28e54-cd6f-4e63-96b2-1e35eceafd10"
+                LastKnownName="ThreadRequest"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="15565fd5-f381-47df-b93e-8961f6e43142"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d5c72537-7dcd-4397-ad2b-b1a3009b51fb"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+                LastKnownName="Resource"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="00810ca4-eecf-4d38-b0cc-04ae7f4bb294"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="cfed64f5-b540-4099-ae9f-31f3a5287c8c"
+                LastKnownName="Permition"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="487c5721-9720-483b-9a14-1bb8b39d3a2b"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="35919f3d-a068-49fa-bf78-a55a694c28d3"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="9c59f2dc-c033-40bf-8d53-6cee28020bd3"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="537ea01a-d571-4421-9bff-373df8942a6c"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="35919f3d-a068-49fa-bf78-a55a694c28d3"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="73b4d548-cfe9-4b54-8438-d6f814fb7c1c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="cfed64f5-b540-4099-ae9f-31f3a5287c8c"
+                LastKnownName="Permition"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="eeb37b78-773c-4994-9da8-a923ee48d6e7"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+                LastKnownName="Resource"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9c59f2dc-c033-40bf-8d53-6cee28020bd3"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="cfed64f5-b540-4099-ae9f-31f3a5287c8c"
+                LastKnownName="Permition"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="537ea01a-d571-4421-9bff-373df8942a6c"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="cfed64f5-b540-4099-ae9f-31f3a5287c8c"
+                LastKnownName="Permition"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="47249bbb-b7d0-45f2-af9a-0808aac9afe6"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+                LastKnownName="Resource"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="487c5721-9720-483b-9a14-1bb8b39d3a2b"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c3296044-f6f9-4373-866c-0bec1f9ee41c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="cfed64f5-b540-4099-ae9f-31f3a5287c8c"
+                LastKnownName="Permition"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="3bf28e54-cd6f-4e63-96b2-1e35eceafd10"
+            name="ThreadRequest"
+            isActor="false"
+            lifelineDisplayName="ThreadRequest">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="52c1dfc6-33fe-4d0e-9e18-40554052df0d"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6e4b8385-5415-4328-bb3c-68e9a8b1146d"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ebbead26-b74b-42d3-9905-9fd617845bb2"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e5d31fb0-b4cf-4f79-bd30-342e6dad691c"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="2d89be81-2b54-4e15-97fd-5f3e43f7b63c"
+            name="Resource"
+            isActor="false"
+            lifelineDisplayName="Resource">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="76c0469e-1df6-4504-bd09-3375e7ce55f9"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="47e7d164-de74-4406-a93f-75771717fde8"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="39871552-eaf8-401e-aea0-22cfc8d7af6c"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="15565fd5-f381-47df-b93e-8961f6e43142"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="eeb37b78-773c-4994-9da8-a923ee48d6e7"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="47249bbb-b7d0-45f2-af9a-0808aac9afe6"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="cfed64f5-b540-4099-ae9f-31f3a5287c8c"
+            name="Permition"
+            isActor="false"
+            lifelineDisplayName="Permition">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="35919f3d-a068-49fa-bf78-a55a694c28d3"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="487c5721-9720-483b-9a14-1bb8b39d3a2b"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="5ff1cae7-72b7-41a4-8b65-c93bac4ccbd1"
+            name="Set the Thread With IPrincipal To Identify User"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="52c1dfc6-33fe-4d0e-9e18-40554052df0d"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="55ae8eef-8867-4c08-8ea6-337e93d5716c"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="cbdf55d1-c943-4771-ad0e-1ac5e348129f"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4ad1522a-f2a5-49fb-810a-b8070253373b"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6e4b8385-5415-4328-bb3c-68e9a8b1146d"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="21a73b46-39b5-4ced-97f4-2171a8e85cf1"
+            name="ThreadRquest try acessing Resource"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ebbead26-b74b-42d3-9905-9fd617845bb2"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="15ff5c65-5742-4602-bab7-449428fbab07"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="ce19b5b8-cfe7-42cc-9818-7227e259b658"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d8e3799e-ba4c-4703-bc42-bf295f6ef6f1"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e5d31fb0-b4cf-4f79-bd30-342e6dad691c"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="4cf1c596-90ee-4bf4-970a-42bdd0e853f7"
+            name="Resoruce ask if user was permition"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="eeb37b78-773c-4994-9da8-a923ee48d6e7"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9c59f2dc-c033-40bf-8d53-6cee28020bd3"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b8d279e8-fca6-4035-ac65-49116bb11f7c"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="537ea01a-d571-4421-9bff-373df8942a6c"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="47249bbb-b7d0-45f2-af9a-0808aac9afe6"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="1c23fad8-50fa-4073-b8dd-87ccc84a62f2"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c332a37d-840e-4406-b2bb-90015e5c4fe2"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="96d4b96b-da10-4205-b5fb-e18a7abadf82"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="73b4d548-cfe9-4b54-8438-d6f814fb7c1c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c3296044-f6f9-4373-866c-0bec1f9ee41c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b02e34e9-4d3e-4dad-8e87-6051d40dded0"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d5c72537-7dcd-4397-ad2b-b1a3009b51fb"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="0d27b67a-bd9f-4461-ae86-ae255454783c"
+        name="IIdentity"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4239da46-b7f3-44bb-b313-e79687343f14"
+        name="IPrincipal"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="202dbe09-6201-45d8-b8fb-0105ea5211ef"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="0d27b67a-bd9f-4461-ae86-ae255454783c"
+              LastKnownName="IIdentity"
+              LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="71a8f254-29d0-4abf-a250-9f669acc8e97"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="49ef37ef-8150-4fe9-bc37-5a27cdfa21d7"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="207fe5f4-13c9-4358-95f6-3e40f50d7787"
+        name="UserPrincipal"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="a77b722e-2cf8-4a5d-8816-c4c62f1fc450">
+            <interfaceMoniker
+              Id="4239da46-b7f3-44bb-b313-e79687343f14"
+              LastKnownName="IPrincipal"
+              LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="84805d3e-3e9a-4d4f-bd9c-c37c72ffa10d"
+        name="IPermition"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="d66a2bfe-1652-4341-969c-5043a0901888"
+            name="Demand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="783c74f2-3d53-4965-9b49-4f883f0f2ffa"
+        name="IPermission"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="2a7a663e-9708-4782-b9b9-1c4b0d58605c"
+            name="Demand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="645d597f-e244-4b0f-9849-68c8be7c1f4b"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="74c5752d-bc72-40b3-8ebc-e728502d300b"
+        name="Permission"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="d7b0783d-0a1a-43cc-97a2-d8757ec406dd">
+            <interfaceMoniker
+              Id="783c74f2-3d53-4965-9b49-4f883f0f2ffa"
+              LastKnownName="IPermission"
+              LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="2c0c1122-2d3e-4e54-8f8b-ca9a69b8084f"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="32a777be-ec12-4fd8-9886-23832926fb27"
+              LastKnownName="RoleProvider"
+              LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="deec837c-9378-4e48-bd57-bbd04f9dcb84"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fb35a965-c77f-43f9-bcb3-c1138a5b9dac"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="d3cb356c-a85a-488c-8adf-1f62a8f8e9a8"
+            name="Demand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="03f61072-1194-449d-822c-714ec1832722"
+        name="Interface2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="32a777be-ec12-4fd8-9886-23832926fb27"
+        name="RoleProvider"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="ecd04b5a-24ea-40ab-af36-5a6064b0f2f2"
+            name="string[] GetAllRoles"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="accd630e-4e48-4ade-8611-7f67e688db0f"
+            name="string[] GetRolesForUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="436d8d4b-8750-4663-965c-937f8944f367"
+                  name="string username"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e3df69fe-8bfa-47ed-a6af-177e903b82b8"
+            name="string[] GetUsersInRole"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ecd4f5dd-53e7-404b-8b1a-406b955b9b9e"
+                  name="string roleName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="8048c737-860f-4d27-9ce2-af775614b17a"
+        name="CodeAccessSecurityAttribute"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="4b85f3fe-c5b3-4575-9265-bd5f25390ef6"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="74c5752d-bc72-40b3-8ebc-e728502d300b"
+              LastKnownName="Permission"
+              LastKnownLocation="ForgetTraffic.ModelLayer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="35b53ec3-585d-4dd4-9469-82fb7216040f"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5f70278d-64d4-454d-aa37-f9838b63302b"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperations>
+          <operation
+            Id="f0a58df0-5d32-44d5-b269-0d44889f4997"
+            name="IPermission CreatePermission"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

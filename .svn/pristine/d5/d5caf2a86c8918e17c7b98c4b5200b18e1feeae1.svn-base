@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="76fcd037-ec75-4288-a1db-18643a9cfa0c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="7ecec0ae-a241-449f-bdce-43678d3a0678" name="Aplicação Android&#xD;&#xA;">
+      <childLayers>
+        <layer Id="1fe49f1d-8833-4dd1-bf77-23cdaa37de48" name="Controlo">
+          <childLayers>
+            <layer Id="ac5a4bf8-9226-4980-85e2-ef2969aba905" name="Controlo&#xD;&#xA;Gráfico" />
+            <layer Id="79ac5a31-0462-4b2d-8dea-ea8f58252049" name="Estatisticas&#xD;&#xA;Utilizador" />
+            <layer Id="029076fc-53c0-4148-ba14-d3ec173244a8" name="Controlo Comunicações" />
+            <layer Id="f82b8627-5b4c-489f-b896-b7242f197aa9" name="Controlo de Acções Utilizador" />
+          </childLayers>
+        </layer>
+        <layer Id="8cd18692-11e2-4589-8ba6-fe2e05ea579d" name="Camada Apresentação">
+          <childLayers>
+            <layer Id="2f8ac30f-d7e7-478a-8b1d-0d75279b4805" name="Componentes Gráficos" />
+            <layer Id="a137b9bc-4667-49ef-92da-e8b1322e1c88" name="Lógica Componentes Gráficos " />
+          </childLayers>
+        </layer>
+        <layer Id="92ed31db-559b-45c6-841c-8655f78558d4" name="Dados">
+          <childLayers>
+            <layer Id="55adc928-b25e-41a0-90a0-d83374babe74" name="Comunicação">
+              <childLayers>
+                <layer Id="56391014-95b6-401e-90ad-fb4ada96ca21" name="API Forget Traffic" />
+                <layer Id="1f1dd68e-41c4-4556-9e37-bcc820d8a8e4" name="API Google Maps" />
+              </childLayers>
+            </layer>
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

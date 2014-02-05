@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{90FB5DCA-7793-4FB0-B230-3FD457012FE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ForgetTraffic.ParallelsServices</RootNamespace>
+    <AssemblyName>ForgetTraffic.ParallelsServices</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="StructureMap">
+      <HintPath>.\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IRunnable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceManager.cs" />
+    <Compile Include="SolveIncidentService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ForgetTraffic.AnsycLibrary\ForgetTraffic.AnsycLibrary.csproj">
+      <Project>{902F65D1-6074-4AE3-8FEF-D525145E30C5}</Project>
+      <Name>ForgetTraffic.AnsycLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.DataModel\ForgetTraffic.DataModel.csproj">
+      <Project>{758CEAC4-52F6-4298-BC8A-56A62A028A9A}</Project>
+      <Name>ForgetTraffic.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.DataTypes\ForgetTraffic.DataTypes.csproj">
+      <Project>{F60C4631-CF0D-4ABC-A76B-554B4E743A28}</Project>
+      <Name>ForgetTraffic.DataTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.InitializeStructure\ForgetTraffic.InitializeStructure.csproj">
+      <Project>{A6896058-D949-43A7-A4C4-DAD45BCE5201}</Project>
+      <Name>ForgetTraffic.InitializeStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.SapoTraffic\ForgetTraffic.SapoTraffic.csproj">
+      <Project>{0D1CE407-8FBA-4F26-9566-D8AFFF352DDD}</Project>
+      <Name>ForgetTraffic.SapoTraffic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.TrafficIncidences\ForgetTraffic.TrafficIncidences.csproj">
+      <Project>{53BCFA2F-3DF2-42AC-B1CD-98B9F76959E4}</Project>
+      <Name>ForgetTraffic.TrafficIncidences</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

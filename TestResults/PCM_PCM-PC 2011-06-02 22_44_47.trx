@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ca9efd72-9970-4388-9811-becf3700ed5a" name="PCM@PCM-PC 2011-06-02 22:44:47" runUser="PCM-PC\PCM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="2ee30008-8016-4a5f-bc3d-9decacd65fb8">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="PCM_PCM-PC 2011-06-02 22_44_47">
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.ServicesUtils\bin\Debug\ForgetTraffic.ServicesUtils.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DataModel\bin\Debug\ForgetTraffic.DataModel.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DataTypes\bin\Debug\ForgetTraffic.DataTypes.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.Autentication\bin\Debug\ForgetTraffic.Autentication.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\bin\Debug\ForgetTraffic.DAL.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-06-02T22:44:47.3096076+01:00" queuing="2011-06-02T22:44:51.1308261+01:00" start="2011-06-02T22:44:52.0308776+01:00" finish="2011-06-02T22:44:56.6101395+01:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="PCM-PC" outcome="Error" timestamp="2011-06-02T22:44:55.5500789+01:00">
+        <Text>One of the background threads threw exception: 
+System.ArgumentException: The supplied connection string is not valid, because it contains insufficient mapping or metadata information.
+Parameter name: connectionString ---&gt; System.InvalidOperationException: Handle is not initialized.
+   at System.WeakReference.set_Target(Object value)
+   at System.Data.Metadata.Edm.MetadataCache.MetadataEntry.EnsureToken()
+   at System.Data.Metadata.Edm.MetadataCache.GetCacheEntry[T](Dictionary`2 cache, String cacheKey, Object objectToLock, IMetadataEntryConstructor`1 metadataEntry, Object&amp; entryToken)
+   at System.Data.Metadata.Edm.MetadataCache.GetOrCreateEdmItemCollection(String cacheKey, MetadataArtifactLoader loader, Object&amp; entryToken)
+   at System.Data.EntityClient.EntityConnection.LoadEdmItemCollection(MetadataWorkspace workspace, MetadataArtifactLoader artifactLoader)
+   at System.Data.EntityClient.EntityConnection.GetMetadataWorkspace(Boolean initializeAllCollections)
+   at System.Data.Objects.ObjectContext.RetrieveMetadataWorkspaceFromConnection()
+   at System.Data.Objects.ObjectContext..ctor(EntityConnection connection, Boolean isConnectionConstructor)
+   --- End of inner exception stack trace ---
+   at System.Data.Objects.ObjectContext..ctor(EntityConnection connection, Boolean isConnectionConstructor)
+   at System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   at ForgetTraffic.DataModel.ForgetTrafficEntities..ctor() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DataModel\ForgetTrafficDataModel.Designer.cs:line 43
+   at ForgetTraffic.DAL.EntitiesManagers.GeneralManager.&lt;Initialize&gt;b__1() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EntitiesManagers\GeneralManager.cs:line 38
+   at ForgetTraffic.DAL.EFRepository.EFUnitOfWorkFactory.Create() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EFRepository\EFUnitOfWorkFactory .cs:line 39
+   at ForgetTraffic.DAL.EFRepository.UnitOfWork.get_Current() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EFRepository\UnitOfWork.cs:line 51
+   at ForgetTraffic.DAL.EntitiesManagers.GeneralManager.Dispose() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EntitiesManagers\GeneralManager.cs:line 49
+   at ForgetTrafficTests.Autentication.AccountManagerTest.Finalize() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTrafficTests.Autentication\AccountManagerTest.cs:line 193</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateUserTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" priority="1" id="5552bc4b-a2ea-2fee-5268-8a8c4486979b">
+      <Execution id="aa7b6086-4387-4747-a2cb-5a661be168ec" />
+      <TestMethod codeBase="E:/3. I.S.E.L/ISEL 2011/Projecto/ProjectosVS/ForgetTraffic/ForgetTrafficTests.Autentication/bin/Debug/ForgetTrafficTests.Autentication.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ForgetTrafficTests.Autentication.AccountManagerTest, ForgetTrafficTests.Autentication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateUserTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5552bc4b-a2ea-2fee-5268-8a8c4486979b" executionId="aa7b6086-4387-4747-a2cb-5a661be168ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="aa7b6086-4387-4747-a2cb-5a661be168ec" testId="5552bc4b-a2ea-2fee-5268-8a8c4486979b" testName="CreateUserTest" computerName="PCM-PC" duration="00:00:02.2051165" startTime="2011-06-02T22:44:52.1978871+01:00" endTime="2011-06-02T22:44:55.2430613+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa7b6086-4387-4747-a2cb-5a661be168ec">
+    </UnitTestResult>
+  </Results>
+</TestRun>

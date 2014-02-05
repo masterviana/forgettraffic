@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="4bfd0f5a-5dff-4a79-abc0-2ede4a02d4a1" name="PCM@PCM-PC 2011-05-30 21:47:45" runUser="PCM-PC\PCM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="2ee30008-8016-4a5f-bc3d-9decacd65fb8">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="PCM_PCM-PC 2011-05-30 21_47_45">
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DataModel\bin\Debug\ForgetTraffic.DataModel.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\bin\Debug\ForgetTraffic.DAL.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.Autentication\bin\Debug\ForgetTraffic.Autentication.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.ServicesUtils\bin\Debug\ForgetTraffic.ServicesUtils.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-05-30T21:47:45.2816471+01:00" queuing="2011-05-30T21:47:45.3666520+01:00" start="2011-05-30T21:47:45.4106545+01:00" finish="2011-05-30T21:47:46.5487196+01:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="4" executed="4" passed="3" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="PCM-PC" outcome="Error" timestamp="2011-05-30T21:47:46.4567143+01:00">
+        <Text>One of the background threads threw exception: 
+System.ArgumentException: The supplied connection string is not valid, because it contains insufficient mapping or metadata information.
+Parameter name: connectionString ---&gt; System.InvalidOperationException: Handle is not initialized.
+   at System.WeakReference.set_Target(Object value)
+   at System.Data.Metadata.Edm.MetadataCache.MetadataEntry.EnsureToken()
+   at System.Data.Metadata.Edm.MetadataCache.GetCacheEntry[T](Dictionary`2 cache, String cacheKey, Object objectToLock, IMetadataEntryConstructor`1 metadataEntry, Object&amp; entryToken)
+   at System.Data.Metadata.Edm.MetadataCache.GetOrCreateEdmItemCollection(String cacheKey, MetadataArtifactLoader loader, Object&amp; entryToken)
+   at System.Data.EntityClient.EntityConnection.LoadEdmItemCollection(MetadataWorkspace workspace, MetadataArtifactLoader artifactLoader)
+   at System.Data.EntityClient.EntityConnection.GetMetadataWorkspace(Boolean initializeAllCollections)
+   at System.Data.Objects.ObjectContext.RetrieveMetadataWorkspaceFromConnection()
+   at System.Data.Objects.ObjectContext..ctor(EntityConnection connection, Boolean isConnectionConstructor)
+   --- End of inner exception stack trace ---
+   at System.Data.Objects.ObjectContext..ctor(EntityConnection connection, Boolean isConnectionConstructor)
+   at System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   at ForgetTraffic.DataModel.ForgetTrafficEntities..ctor() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DataModel\ForgetTrafficDataModel.Designer.cs:line 43
+   at ForgetTraffic.DAL.EntitiesManagers.GeneralManager.&lt;Initialize&gt;b__1() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EntitiesManagers\GeneralManager.cs:line 38
+   at ForgetTraffic.DAL.EFRepository.EFUnitOfWorkFactory.Create() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EFRepository\EFUnitOfWorkFactory .cs:line 39
+   at ForgetTraffic.DAL.EFRepository.UnitOfWork.get_Current() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EFRepository\UnitOfWork.cs:line 51
+   at ForgetTraffic.DAL.EntitiesManagers.GeneralManager.Dispose() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EntitiesManagers\GeneralManager.cs:line 49
+   at ForgetTrafficTests.Autentication.AccountManagerTest.Finalize() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTrafficTests.Autentication\AccountManagerTest.cs:line 192</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateUpdateProviderUserProviderTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" priority="2" id="afc8ea1b-2a52-0c03-e646-da2b450e1f64">
+      <Execution id="595a4e22-c35f-4552-93eb-e1a8a4d77eb0" />
+      <TestMethod codeBase="E:/3. I.S.E.L/ISEL 2011/Projecto/ProjectosVS/ForgetTraffic/ForgetTrafficTests.Autentication/bin/Debug/ForgetTrafficTests.Autentication.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ForgetTrafficTests.Autentication.AccountManagerTest, ForgetTrafficTests.Autentication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateUpdateProviderUserProviderTest" />
+    </UnitTest>
+    <UnitTest name="DeleteUser" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" priority="4" id="50a0a843-a16c-432c-cbf5-9d2524a552fa">
+      <Execution id="80e85a69-f98d-4681-bc14-c0950f418c8d" />
+      <TestMethod codeBase="E:/3. I.S.E.L/ISEL 2011/Projecto/ProjectosVS/ForgetTraffic/ForgetTrafficTests.Autentication/bin/Debug/ForgetTrafficTests.Autentication.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ForgetTrafficTests.Autentication.AccountManagerTest, ForgetTrafficTests.Autentication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteUser" />
+    </UnitTest>
+    <UnitTest name="CreateUserTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" priority="1" id="5552bc4b-a2ea-2fee-5268-8a8c4486979b">
+      <Execution id="86cf737b-c1a0-4cc0-b8c1-0a44c4dbc480" />
+      <TestMethod codeBase="E:/3. I.S.E.L/ISEL 2011/Projecto/ProjectosVS/ForgetTraffic/ForgetTrafficTests.Autentication/bin/Debug/ForgetTrafficTests.Autentication.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ForgetTrafficTests.Autentication.AccountManagerTest, ForgetTrafficTests.Autentication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateUserTest" />
+    </UnitTest>
+    <UnitTest name="DeactiveUser" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" priority="3" id="4803f2e3-405f-d3e4-7e10-cfaa464b56af">
+      <Execution id="624eacd8-340f-4900-8cc9-a0dada02bc1c" />
+      <TestMethod codeBase="E:/3. I.S.E.L/ISEL 2011/Projecto/ProjectosVS/ForgetTraffic/ForgetTrafficTests.Autentication/bin/Debug/ForgetTrafficTests.Autentication.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ForgetTrafficTests.Autentication.AccountManagerTest, ForgetTrafficTests.Autentication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeactiveUser" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Lista de TEste" id="b3bfb357-bfcb-4e08-b247-8b99cc580d1a" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6" />
+    <TestList name="3.Desactivar" id="00011763-bf0d-4278-9426-b003925358b3" parentListId="b3bfb357-bfcb-4e08-b247-8b99cc580d1a">
+      <TestLinks>
+        <TestLink id="4803f2e3-405f-d3e4-7e10-cfaa464b56af" name="DeactiveUser" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestLinks>
+    </TestList>
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+    <TestList name="Lists of Results" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6" />
+    <TestList name="1.Criar" id="bb2b8806-9051-4b53-bd3e-174b9d2b51b8" parentListId="b3bfb357-bfcb-4e08-b247-8b99cc580d1a">
+      <TestLinks>
+        <TestLink id="5552bc4b-a2ea-2fee-5268-8a8c4486979b" name="CreateUserTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestLinks>
+    </TestList>
+    <TestList name="2.Criar Provider" id="2642ac4d-e126-486b-8ff4-00728430ab1b" parentListId="b3bfb357-bfcb-4e08-b247-8b99cc580d1a">
+      <TestLinks>
+        <TestLink id="afc8ea1b-2a52-0c03-e646-da2b450e1f64" name="CreateUpdateProviderUserProviderTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestLinks>
+    </TestList>
+    <TestList name="4.Apagar" id="08c5a6e7-06e5-41ec-a051-5e30e00781b1" parentListId="b3bfb357-bfcb-4e08-b247-8b99cc580d1a">
+      <TestLinks>
+        <TestLink id="50a0a843-a16c-432c-cbf5-9d2524a552fa" name="DeleteUser" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestLinks>
+    </TestList>
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5552bc4b-a2ea-2fee-5268-8a8c4486979b" executionId="86cf737b-c1a0-4cc0-b8c1-0a44c4dbc480" testListId="bb2b8806-9051-4b53-bd3e-174b9d2b51b8" />
+    <TestEntry testId="afc8ea1b-2a52-0c03-e646-da2b450e1f64" executionId="595a4e22-c35f-4552-93eb-e1a8a4d77eb0" testListId="2642ac4d-e126-486b-8ff4-00728430ab1b" />
+    <TestEntry testId="4803f2e3-405f-d3e4-7e10-cfaa464b56af" executionId="624eacd8-340f-4900-8cc9-a0dada02bc1c" testListId="00011763-bf0d-4278-9426-b003925358b3" />
+    <TestEntry testId="50a0a843-a16c-432c-cbf5-9d2524a552fa" executionId="80e85a69-f98d-4681-bc14-c0950f418c8d" testListId="08c5a6e7-06e5-41ec-a051-5e30e00781b1" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="86cf737b-c1a0-4cc0-b8c1-0a44c4dbc480" testId="5552bc4b-a2ea-2fee-5268-8a8c4486979b" testName="CreateUserTest" computerName="PCM-PC" duration="00:00:00.4802116" startTime="2011-05-30T21:47:45.4396561+01:00" endTime="2011-05-30T21:47:46.2757040+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="bb2b8806-9051-4b53-bd3e-174b9d2b51b8" relativeResultsDirectory="86cf737b-c1a0-4cc0-b8c1-0a44c4dbc480">
+    </UnitTestResult>
+    <UnitTestResult executionId="595a4e22-c35f-4552-93eb-e1a8a4d77eb0" testId="afc8ea1b-2a52-0c03-e646-da2b450e1f64" testName="CreateUpdateProviderUserProviderTest" computerName="PCM-PC" duration="00:00:00.0426085" startTime="2011-05-30T21:47:46.2787041+01:00" endTime="2011-05-30T21:47:46.3247068+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="2642ac4d-e126-486b-8ff4-00728430ab1b" relativeResultsDirectory="595a4e22-c35f-4552-93eb-e1a8a4d77eb0">
+    </UnitTestResult>
+    <UnitTestResult executionId="624eacd8-340f-4900-8cc9-a0dada02bc1c" testId="4803f2e3-405f-d3e4-7e10-cfaa464b56af" testName="DeactiveUser" computerName="PCM-PC" duration="00:00:00.0103982" startTime="2011-05-30T21:47:46.3347073+01:00" endTime="2011-05-30T21:47:46.3477081+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="00011763-bf0d-4278-9426-b003925358b3" relativeResultsDirectory="624eacd8-340f-4900-8cc9-a0dada02bc1c">
+    </UnitTestResult>
+    <UnitTestResult executionId="80e85a69-f98d-4681-bc14-c0950f418c8d" testId="50a0a843-a16c-432c-cbf5-9d2524a552fa" testName="DeleteUser" computerName="PCM-PC" duration="00:00:00.0272092" startTime="2011-05-30T21:47:46.3507083+01:00" endTime="2011-05-30T21:47:46.3807100+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="08c5a6e7-06e5-41ec-a051-5e30e00781b1" relativeResultsDirectory="80e85a69-f98d-4681-bc14-c0950f418c8d">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Fail failed. Assert.Equals should not be used for Assertions. Please use Assert.AreEqual &amp; overloads instead.</Message>
+          <StackTrace>   at ForgetTrafficTests.Autentication.AccountManagerTest.DeleteUser() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTrafficTests.Autentication\AccountManagerTest.cs:line 185
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="298530ba-b384-452a-bb21-caaf5951fb93" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="8e2148f6-42b9-4a16-aa89-2c9c7a1897a1" name="WebSite Forget Traffic">
+      <childLayers>
+        <layer Id="9019f73b-51f0-46d6-9d80-115906e9aa20" name="Lógica">
+          <childLayers>
+            <layer Id="efa83c1a-dc1a-4229-b6bf-bcbc045388ac" name="Controlo">
+              <childLayers>
+                <layer Id="1a5742a2-636f-4010-a6b0-142277b81e74" name="Incidências" />
+                <layer Id="9fc7d873-fc40-4e80-99b4-664d94651e50" name="Operações Utilizador" />
+              </childLayers>
+            </layer>
+          </childLayers>
+        </layer>
+        <layer Id="7c015c54-9147-43fc-a5d9-6ca6e54612ff" name="Dados">
+          <childLayers>
+            <layer Id="cdfb837c-3459-4172-9dae-45dde22c69af" name="Comunicação">
+              <childLayers>
+                <layer Id="0037cd10-b800-4f86-bc5f-e691b5b8f61b" name="API Forget Traffic" />
+                <layer Id="52527103-1146-4cbc-94de-6f8004a4cef2" name="API Google Maps" />
+              </childLayers>
+            </layer>
+          </childLayers>
+        </layer>
+        <layer Id="09cabfb3-d386-41d6-8cdf-e5231c3c1949" name="Cliente">
+          <childLayers>
+            <layer Id="50ca6ff4-812d-4efe-9fb3-57d7cbf39b80" name=" Browser">
+              <childLayers>
+                <layer Id="5ee49069-0846-4049-84c2-d66480816894" name="Componentes" />
+              </childLayers>
+            </layer>
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

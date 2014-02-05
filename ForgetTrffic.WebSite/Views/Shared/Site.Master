@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="../../Content/ForgetTraffic.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery-1.4.1.js")%>"> </script> 
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"> </script>
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/Incident.js")%>"> </script> 
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/MapGoogle.js")%>"> </script> 
+</head>
+<%--
+<body>
+    <div class="page">
+
+        <div id="header">
+            <div id="title">
+                <h1>My MVC Application</h1>
+            </div>
+              
+            <div id="logindisplay">
+                <% Html.RenderPartial("LogOnUserControl"); %>
+            </div> 
+            
+            <div id="menucontainer">
+            
+                <ul id="menu">              
+                    <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
+                    <li><%: Html.ActionLink("About", "About", "Home")%></li>
+                </ul>
+            
+            </div>
+        </div>
+
+        <div id="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+</body>
+--%>
+
+<body class="body"  >
+
+
+<div id="container" class="containerCss">
+
+    <table style="width: 100%" >
+	    <tr>
+		    <td style="width:15%; height:150px; vertical-align: top; text-align: right;" >
+		        <img src="<%: Url.Content("~/Content/images/logo03.jpg")%>" style="width:150px;height:150px;" alt="150"/>
+            </td>
+		    <td colspan="2">  
+		    <table style="width: 100%">
+			    <tr class="Title1" >
+				    <td class="Title1">Forget About Traffic</td>
+			    </tr>
+			    <tr>
+				    <td class="Title2">Sistema cooperativo para gestão de incidências de tráfego</td>
+			    </tr>
+		    </table>
+		    </td>
+		    <td style="width:20%;vertical-align: top;text-align: right;">
+               <img src="<%: Url.Content("~/Content/images/top_isel.jpg")%>" style="width:35px;height:35px;" alt="25"/>
+            </td>
+	    </tr>
+	    <tr>
+		    <td id="latMenu" style="width:15%;">
+              <% Html.RenderPartial("LogOnUserControl"); %>
+                 <asp:ContentPlaceHolder ID="LogContent" runat="server" />
+            </td>
+		    <td colspan="3" style="width:100%; :100%" >
+
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+            </td>
+	    </tr>
+	    <tr>
+		    <td colspan="2" style="width:50%" class="footer">Forget About Traffic&nbsp; - ISEL 2011 </td>
+		    <td colspan="2"  style="width:50%; text-align: right;" class="footer">Autores : Vitor Viana & Fernando Vaz </td>
+	    </tr>
+    </table>
+
+
+</div>
+
+
+</body>
+
+
+</html>

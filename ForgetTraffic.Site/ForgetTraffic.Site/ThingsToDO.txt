@@ -1,0 +1,44 @@
+
+
+Fernando 
+--> Redeminsionar os balões  (CSS, falar com vitor....)
+--> Routing do Site 
+<<<<<<< .mine
+--> Pensar nos conteudos do site.. Cartaz.. falar da android.. ect
+=======
+>>>>>>> .r73
+--> Add incident botões como devce ser 
+--> Alterar o Sapo Trânsito para ver se na string aparece manutenção ou tranito ou outras...   
+--> Criar o objecto em .net que faça a ponte entre o serviço do vviana e o site 
+
+
+
+--> Aparecer só um balão e não mais q um balão (feito) 
+
+
+
+
+
+
+Vitor 
+
+<<<<<<< .mine
+-->  Arranjar as imagens para os marcadores (4 tipos) e publica-los 
+=======
+--> Arranjar as imagens para os marcadores (4 tipos) e publica-los 
+--> Figuras das votações a pôr nos balões 
+
+>>>>>>> .r73
+
+<<<<<<< .mine
+------------------------------
+		Serviço 
+------------------------------
+
+* Login de utilizadores já existentes
+* Put incidencias já para o nosso serviço
+* Get das incidencias por data da ultima actualização
+
+
+=======
+>>>>>>> .r73

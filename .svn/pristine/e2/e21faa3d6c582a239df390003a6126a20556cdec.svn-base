@@ -1,0 +1,1222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ForgetTrafficModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ForgetTrafficModelStoreContainer">
+          <EntitySet Name="tblConfirmActions" EntityType="ForgetTrafficModel.Store.tblConfirmActions" store:Type="Tables" Schema="Admin" />
+          <EntitySet Name="tblPermission" EntityType="ForgetTrafficModel.Store.tblPermission" store:Type="Tables" Schema="Admin" />
+          <EntitySet Name="tblRole" EntityType="ForgetTrafficModel.Store.tblRole" store:Type="Tables" Schema="Admin" />
+          <EntitySet Name="tblRolePermission" EntityType="ForgetTrafficModel.Store.tblRolePermission" store:Type="Tables" Schema="Admin" />
+          <EntitySet Name="tblSysState" EntityType="ForgetTrafficModel.Store.tblSysState" store:Type="Tables" Schema="Admin" />
+          <EntitySet Name="tblUserRole" EntityType="ForgetTrafficModel.Store.tblUserRole" store:Type="Tables" Schema="Admin" />
+          <EntitySet Name="tblIncidentVote" EntityType="ForgetTrafficModel.Store.tblIncidentVote" store:Type="Tables" Schema="Traffic" />
+          <EntitySet Name="tblUser" EntityType="ForgetTrafficModel.Store.tblUser" store:Type="Tables" Schema="Traffic" />
+          <EntitySet Name="tblUserProfile" EntityType="ForgetTrafficModel.Store.tblUserProfile" store:Type="Tables" Schema="Traffic" />
+          <EntitySet Name="tblOccurrenceType" EntityType="ForgetTrafficModel.Store.tblOccurrenceType" store:Type="Tables" Schema="Web" />
+          <EntitySet Name="tblTrafficOcurrence" EntityType="ForgetTrafficModel.Store.tblTrafficOcurrence" store:Type="Tables" Schema="Web" />
+          <EntitySet Name="tblUserProvider" EntityType="ForgetTrafficModel.Store.tblUserProvider" store:Type="Tables" Schema="Web" />
+          <EntitySet Name="tblValidationToken" EntityType="ForgetTrafficModel.Store.tblValidationToken" store:Type="Tables" Schema="Web" />
+          <AssociationSet Name="FK_tblConfirmActions_tblSysState" Association="ForgetTrafficModel.Store.FK_tblConfirmActions_tblSysState">
+            <End Role="tblSysState" EntitySet="tblSysState" />
+            <End Role="tblConfirmActions" EntitySet="tblConfirmActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblConfirmActions_tblUser" Association="ForgetTrafficModel.Store.FK_tblConfirmActions_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblConfirmActions" EntitySet="tblConfirmActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblIncidentVote_tblTrafficOcurrence" Association="ForgetTrafficModel.Store.FK_tblIncidentVote_tblTrafficOcurrence">
+            <End Role="tblTrafficOcurrence" EntitySet="tblTrafficOcurrence" />
+            <End Role="tblIncidentVote" EntitySet="tblIncidentVote" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblIncidentVote_tblUser" Association="ForgetTrafficModel.Store.FK_tblIncidentVote_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblIncidentVote" EntitySet="tblIncidentVote" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRolePermission_tblPermission" Association="ForgetTrafficModel.Store.FK_tblRolePermission_tblPermission">
+            <End Role="tblPermission" EntitySet="tblPermission" />
+            <End Role="tblRolePermission" EntitySet="tblRolePermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRolePermission_tblRole" Association="ForgetTrafficModel.Store.FK_tblRolePermission_tblRole">
+            <End Role="tblRole" EntitySet="tblRole" />
+            <End Role="tblRolePermission" EntitySet="tblRolePermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrafficOcurrence_tblOccurrenceType" Association="ForgetTrafficModel.Store.FK_tblTrafficOcurrence_tblOccurrenceType">
+            <End Role="tblOccurrenceType" EntitySet="tblOccurrenceType" />
+            <End Role="tblTrafficOcurrence" EntitySet="tblTrafficOcurrence" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrafficOcurrence_tblSysState" Association="ForgetTrafficModel.Store.FK_tblTrafficOcurrence_tblSysState">
+            <End Role="tblSysState" EntitySet="tblSysState" />
+            <End Role="tblTrafficOcurrence" EntitySet="tblTrafficOcurrence" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrafficOcurrence_tblUser" Association="ForgetTrafficModel.Store.FK_tblTrafficOcurrence_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblTrafficOcurrence" EntitySet="tblTrafficOcurrence" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblUserProvider_tblUser" Association="ForgetTrafficModel.Store.FK_tblUserProvider_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblUserProvider" EntitySet="tblUserProvider" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblUserRole_tblRole" Association="ForgetTrafficModel.Store.FK_tblUserRole_tblRole">
+            <End Role="tblRole" EntitySet="tblRole" />
+            <End Role="tblUserRole" EntitySet="tblUserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblUserRole_tblUser" Association="ForgetTrafficModel.Store.FK_tblUserRole_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblUserRole" EntitySet="tblUserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblValidationToken_tblUser" Association="ForgetTrafficModel.Store.FK_tblValidationToken_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblValidationToken" EntitySet="tblValidationToken" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_tblUser" Association="ForgetTrafficModel.Store.FK_UserProfile_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblUserProfile" EntitySet="tblUserProfile" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tblConfirmActions">
+          <Key>
+            <PropertyRef Name="IdConfirmActions" />
+          </Key>
+          <Property Name="IdConfirmActions" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Token" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ValidateEndTime" Type="datetime" Nullable="false" />
+          <Property Name="ConfirmAction" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SYS_CREATE_DATE" Type="datetime" />
+          <Property Name="SYS_LAST_MODIFY_DATE" Type="datetime" />
+          <Property Name="SYS_ROWVERSION" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="IsConfirmed" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblPermission">
+          <Key>
+            <PropertyRef Name="CodPermisson" />
+          </Key>
+          <Property Name="CodPermisson" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PermissionDescripiton" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="PermissionTitle" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SYS_STATE" Type="varchar" Nullable="false" MaxLength="36" />
+          <Property Name="SYS_CREATE_DATE" Type="datetime" Nullable="false" />
+          <Property Name="SYS_USER_CREATE" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="SYS_LAST_UPDATE_DATE" Type="datetime" />
+          <Property Name="SYS_LAST_UPDATE_USER" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblRole">
+          <Key>
+            <PropertyRef Name="CodRole" />
+          </Key>
+          <Property Name="CodRole" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleDescription" Type="varchar" Nullable="false" MaxLength="300" />
+          <Property Name="RoleTitle" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="SYS_STATE" Type="varchar" Nullable="false" MaxLength="36" />
+          <Property Name="SYS_CREATE_DATE" Type="datetime" Nullable="false" />
+          <Property Name="SYS_USER_CREATE" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="SYS_LAST_UPDATE_DATE" Type="datetime" />
+          <Property Name="SYS_LAST_UPDATE_USER" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblRolePermission">
+          <Key>
+            <PropertyRef Name="CodRolePermisison" />
+          </Key>
+          <Property Name="CodRolePermisison" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CodRole" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CodPermission" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSysState">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CodeParent" Type="varchar" MaxLength="50" />
+          <Property Name="SYS_CREATE_DATE" Type="datetime" />
+          <Property Name="SYS_LAST_MODIFY_DATE" Type="datetime" />
+          <Property Name="SYS_ROWVERSION" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="tblUserRole">
+          <Key>
+            <PropertyRef Name="CodUserRole" />
+          </Key>
+          <Property Name="CodUserRole" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CodRole" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CodUser" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblIncidentVote">
+          <Key>
+            <PropertyRef Name="VoteId" />
+          </Key>
+          <Property Name="VoteId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IncidentId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="Comment" Type="varchar" MaxLength="100" />
+          <Property Name="VoteType" Type="bit" Nullable="false" />
+          <Property Name="LastModifyDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="Image" Type="varchar" MaxLength="50" />
+          <Property Name="BirthDate" Type="varchar" MaxLength="50" />
+          <Property Name="SecondEmail" Type="varchar" MaxLength="50" />
+          <Property Name="SYS_STATE" Type="varchar" Nullable="false" MaxLength="36" />
+          <Property Name="SYS_CREATE_DATE" Type="datetime" Nullable="false" />
+          <Property Name="SYS_USER_CREATE" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="SYS_LAST_UPDATE_DATE" Type="datetime" />
+          <Property Name="SYS_LAST_UPDATE_USER" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblUserProfile">
+          <Key>
+            <PropertyRef Name="CodUserProfile" />
+          </Key>
+          <Property Name="CodUserProfile" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CodUser" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SubimtIncidents" Type="int" Nullable="false" />
+          <Property Name="ValidateIncidents" Type="int" Nullable="false" />
+          <Property Name="LoginCount" Type="int" Nullable="false" />
+          <Property Name="ProfilePoints" Type="int" Nullable="false" />
+          <Property Name="VotesCount" Type="int" Nullable="false" />
+          <Property Name="SYS_CREATE_DATE" Type="datetime" />
+          <Property Name="SYS_LAST_MODIFY_DATE" Type="datetime" />
+          <Property Name="SYS_ROWVERSION" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="hiddenInformation" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblOccurrenceType">
+          <Key>
+            <PropertyRef Name="idTypeOccurrence" />
+          </Key>
+          <Property Name="idTypeOccurrence" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OccurrenceLevel" Type="int" Nullable="false" />
+          <Property Name="OccurrenceColor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="OccorrenceDescription" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="OccorrenceImage" Type="image" />
+          <Property Name="CodOccurrenceType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblTrafficOcurrence">
+          <Key>
+            <PropertyRef Name="idTrafficOccurence" />
+          </Key>
+          <Property Name="idTrafficOccurence" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="Longitude" Type="float" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="1000" />
+          <Property Name="OccurrenceType" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TipoGravidade" Type="int" />
+          <Property Name="Distrito" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Concelho" Type="varchar" MaxLength="500" />
+          <Property Name="Localidade" Type="varchar" MaxLength="500" />
+          <Property Name="Pais" Type="varchar" MaxLength="100" />
+          <Property Name="EstimatedEndDate" Type="datetime" />
+          <Property Name="Title" Type="varchar" MaxLength="500" />
+          <Property Name="SYS_STATE" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SYS_CREATE_DATE" Type="datetime" Nullable="false" />
+          <Property Name="SYS_LAST_MODIFY_DATE" Type="datetime" />
+          <Property Name="SYS_ROWVERSION" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="CodPais" Type="varchar" MaxLength="5" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="20" />
+          <Property Name="Adress" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblUserProvider">
+          <Key>
+            <PropertyRef Name="IdProvider" />
+          </Key>
+          <Property Name="IdProvider" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PassHash" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="SecretQuestion" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="SecretAnwser" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Islogged" Type="bit" Nullable="false" />
+          <Property Name="LastLoggegDate" Type="datetime" Nullable="false" />
+          <Property Name="IdStatus" Type="varchar" MaxLength="36" />
+          <Property Name="PassSalt" Type="varbinary" MaxLength="200" />
+          <Property Name="LoginCount" Type="int" />
+          <Property Name="FailedPasswordAttemptCount" Type="int" />
+          <Property Name="Comment" Type="varchar" MaxLength="200" />
+          <Property Name="SYS_STATE" Type="varchar" Nullable="false" MaxLength="36" />
+          <Property Name="SYS_CREATE_DATE" Type="datetime" Nullable="false" />
+          <Property Name="SYS_USER_CREATE" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="SYS_LAST_UPDATE_DATE" Type="datetime" />
+          <Property Name="SYS_LAST_UPDATE_USER" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblValidationToken">
+          <Key>
+            <PropertyRef Name="idIdentityValidation" />
+          </Key>
+          <Property Name="idIdentityValidation" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AllocationDate" Type="datetime" Nullable="false" />
+          <Property Name="ValidationToken" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="ExperitionTime" Type="datetime" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CommunicationCount" Type="int" Nullable="false" />
+          <Property Name="UnprocessedStringToken" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="SYS_STATE" Type="varchar" Nullable="false" MaxLength="36" />
+          <Property Name="SYS_CREATE_DATE" Type="datetime" Nullable="false" />
+          <Property Name="SYS_USER_CREATE" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="SYS_LAST_UPDATE_DATE" Type="datetime" />
+          <Property Name="SYS_LAST_UPDATE_USER" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_tblConfirmActions_tblSysState">
+          <End Role="tblSysState" Type="ForgetTrafficModel.Store.tblSysState" Multiplicity="1" />
+          <End Role="tblConfirmActions" Type="ForgetTrafficModel.Store.tblConfirmActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSysState">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblConfirmActions">
+              <PropertyRef Name="ConfirmAction" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblConfirmActions_tblUser">
+          <End Role="tblUser" Type="ForgetTrafficModel.Store.tblUser" Multiplicity="1" />
+          <End Role="tblConfirmActions" Type="ForgetTrafficModel.Store.tblConfirmActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblConfirmActions">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblIncidentVote_tblTrafficOcurrence">
+          <End Role="tblTrafficOcurrence" Type="ForgetTrafficModel.Store.tblTrafficOcurrence" Multiplicity="1" />
+          <End Role="tblIncidentVote" Type="ForgetTrafficModel.Store.tblIncidentVote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTrafficOcurrence">
+              <PropertyRef Name="idTrafficOccurence" />
+            </Principal>
+            <Dependent Role="tblIncidentVote">
+              <PropertyRef Name="IncidentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblIncidentVote_tblUser">
+          <End Role="tblUser" Type="ForgetTrafficModel.Store.tblUser" Multiplicity="1" />
+          <End Role="tblIncidentVote" Type="ForgetTrafficModel.Store.tblIncidentVote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblIncidentVote">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRolePermission_tblPermission">
+          <End Role="tblPermission" Type="ForgetTrafficModel.Store.tblPermission" Multiplicity="1" />
+          <End Role="tblRolePermission" Type="ForgetTrafficModel.Store.tblRolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblPermission">
+              <PropertyRef Name="CodPermisson" />
+            </Principal>
+            <Dependent Role="tblRolePermission">
+              <PropertyRef Name="CodPermission" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRolePermission_tblRole">
+          <End Role="tblRole" Type="ForgetTrafficModel.Store.tblRole" Multiplicity="1" />
+          <End Role="tblRolePermission" Type="ForgetTrafficModel.Store.tblRolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRole">
+              <PropertyRef Name="CodRole" />
+            </Principal>
+            <Dependent Role="tblRolePermission">
+              <PropertyRef Name="CodRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrafficOcurrence_tblOccurrenceType">
+          <End Role="tblOccurrenceType" Type="ForgetTrafficModel.Store.tblOccurrenceType" Multiplicity="1" />
+          <End Role="tblTrafficOcurrence" Type="ForgetTrafficModel.Store.tblTrafficOcurrence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblOccurrenceType">
+              <PropertyRef Name="idTypeOccurrence" />
+            </Principal>
+            <Dependent Role="tblTrafficOcurrence">
+              <PropertyRef Name="OccurrenceType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrafficOcurrence_tblSysState">
+          <End Role="tblSysState" Type="ForgetTrafficModel.Store.tblSysState" Multiplicity="1" />
+          <End Role="tblTrafficOcurrence" Type="ForgetTrafficModel.Store.tblTrafficOcurrence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSysState">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblTrafficOcurrence">
+              <PropertyRef Name="SYS_STATE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrafficOcurrence_tblUser">
+          <End Role="tblUser" Type="ForgetTrafficModel.Store.tblUser" Multiplicity="1" />
+          <End Role="tblTrafficOcurrence" Type="ForgetTrafficModel.Store.tblTrafficOcurrence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblTrafficOcurrence">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblUserProvider_tblUser">
+          <End Role="tblUser" Type="ForgetTrafficModel.Store.tblUser" Multiplicity="1" />
+          <End Role="tblUserProvider" Type="ForgetTrafficModel.Store.tblUserProvider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblUserProvider">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblUserRole_tblRole">
+          <End Role="tblRole" Type="ForgetTrafficModel.Store.tblRole" Multiplicity="1" />
+          <End Role="tblUserRole" Type="ForgetTrafficModel.Store.tblUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRole">
+              <PropertyRef Name="CodRole" />
+            </Principal>
+            <Dependent Role="tblUserRole">
+              <PropertyRef Name="CodRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblUserRole_tblUser">
+          <End Role="tblUser" Type="ForgetTrafficModel.Store.tblUser" Multiplicity="1" />
+          <End Role="tblUserRole" Type="ForgetTrafficModel.Store.tblUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblUserRole">
+              <PropertyRef Name="CodUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblValidationToken_tblUser">
+          <End Role="tblUser" Type="ForgetTrafficModel.Store.tblUser" Multiplicity="1" />
+          <End Role="tblValidationToken" Type="ForgetTrafficModel.Store.tblValidationToken" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblValidationToken">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_tblUser">
+          <End Role="tblUser" Type="ForgetTrafficModel.Store.tblUser" Multiplicity="1" />
+          <End Role="tblUserProfile" Type="ForgetTrafficModel.Store.tblUserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblUserProfile">
+              <PropertyRef Name="CodUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ForgetTrafficModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ForgetTrafficEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblConfirmActions" EntityType="ForgetTrafficModel.tblConfirmActions" />
+          <EntitySet Name="tblPermission" EntityType="ForgetTrafficModel.tblPermission" />
+          <EntitySet Name="tblRole" EntityType="ForgetTrafficModel.tblRole" />
+          <EntitySet Name="tblRolePermission" EntityType="ForgetTrafficModel.tblRolePermission" />
+          <EntitySet Name="tblSysState" EntityType="ForgetTrafficModel.tblSysState" />
+          <EntitySet Name="tblUserRole" EntityType="ForgetTrafficModel.tblUserRole" />
+          <EntitySet Name="tblIncidentVote" EntityType="ForgetTrafficModel.tblIncidentVote" />
+          <EntitySet Name="tblUser" EntityType="ForgetTrafficModel.tblUser" />
+          <EntitySet Name="tblUserProfile" EntityType="ForgetTrafficModel.tblUserProfile" />
+          <EntitySet Name="tblOccurrenceType" EntityType="ForgetTrafficModel.tblOccurrenceType" />
+          <EntitySet Name="tblTrafficOcurrence" EntityType="ForgetTrafficModel.tblTrafficOcurrence" />
+          <EntitySet Name="tblUserProvider" EntityType="ForgetTrafficModel.tblUserProvider" />
+          <EntitySet Name="tblValidationToken" EntityType="ForgetTrafficModel.tblValidationToken" />
+          <AssociationSet Name="FK_tblConfirmActions_tblSysState" Association="ForgetTrafficModel.FK_tblConfirmActions_tblSysState">
+            <End Role="tblSysState" EntitySet="tblSysState" />
+            <End Role="tblConfirmActions" EntitySet="tblConfirmActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblConfirmActions_tblUser" Association="ForgetTrafficModel.FK_tblConfirmActions_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblConfirmActions" EntitySet="tblConfirmActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRolePermission_tblPermission" Association="ForgetTrafficModel.FK_tblRolePermission_tblPermission">
+            <End Role="tblPermission" EntitySet="tblPermission" />
+            <End Role="tblRolePermission" EntitySet="tblRolePermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRolePermission_tblRole" Association="ForgetTrafficModel.FK_tblRolePermission_tblRole">
+            <End Role="tblRole" EntitySet="tblRole" />
+            <End Role="tblRolePermission" EntitySet="tblRolePermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblUserRole_tblRole" Association="ForgetTrafficModel.FK_tblUserRole_tblRole">
+            <End Role="tblRole" EntitySet="tblRole" />
+            <End Role="tblUserRole" EntitySet="tblUserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrafficOcurrence_tblSysState" Association="ForgetTrafficModel.FK_tblTrafficOcurrence_tblSysState">
+            <End Role="tblSysState" EntitySet="tblSysState" />
+            <End Role="tblTrafficOcurrence" EntitySet="tblTrafficOcurrence" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblUserRole_tblUser" Association="ForgetTrafficModel.FK_tblUserRole_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblUserRole" EntitySet="tblUserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblIncidentVote_tblTrafficOcurrence" Association="ForgetTrafficModel.FK_tblIncidentVote_tblTrafficOcurrence">
+            <End Role="tblTrafficOcurrence" EntitySet="tblTrafficOcurrence" />
+            <End Role="tblIncidentVote" EntitySet="tblIncidentVote" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblIncidentVote_tblUser" Association="ForgetTrafficModel.FK_tblIncidentVote_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblIncidentVote" EntitySet="tblIncidentVote" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrafficOcurrence_tblUser" Association="ForgetTrafficModel.FK_tblTrafficOcurrence_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblTrafficOcurrence" EntitySet="tblTrafficOcurrence" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblUserProvider_tblUser" Association="ForgetTrafficModel.FK_tblUserProvider_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblUserProvider" EntitySet="tblUserProvider" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblValidationToken_tblUser" Association="ForgetTrafficModel.FK_tblValidationToken_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblValidationToken" EntitySet="tblValidationToken" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_tblUser" Association="ForgetTrafficModel.FK_UserProfile_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblUserProfile" EntitySet="tblUserProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrafficOcurrence_tblOccurrenceType" Association="ForgetTrafficModel.FK_tblTrafficOcurrence_tblOccurrenceType">
+            <End Role="tblOccurrenceType" EntitySet="tblOccurrenceType" />
+            <End Role="tblTrafficOcurrence" EntitySet="tblTrafficOcurrence" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tblConfirmActions">
+          <Key>
+            <PropertyRef Name="IdConfirmActions" />
+          </Key>
+          <Property Type="Guid" Name="IdConfirmActions" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="Token" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ValidateEndTime" Nullable="false" />
+          <Property Type="Guid" Name="ConfirmAction" Nullable="false" />
+          <Property Type="DateTime" Name="SYS_CREATE_DATE" />
+          <Property Type="DateTime" Name="SYS_LAST_MODIFY_DATE" />
+          <Property Type="Binary" Name="SYS_ROWVERSION" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Type="Boolean" Name="IsConfirmed" />
+          <NavigationProperty Name="tblSysState" Relationship="ForgetTrafficModel.FK_tblConfirmActions_tblSysState" FromRole="tblConfirmActions" ToRole="tblSysState" />
+          <NavigationProperty Name="tblUser" Relationship="ForgetTrafficModel.FK_tblConfirmActions_tblUser" FromRole="tblConfirmActions" ToRole="tblUser" />
+        </EntityType>
+        <EntityType Name="tblPermission">
+          <Key>
+            <PropertyRef Name="CodPermisson" />
+          </Key>
+          <Property Type="Guid" Name="CodPermisson" Nullable="false" />
+          <Property Type="String" Name="PermissionDescripiton" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PermissionTitle" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SYS_STATE" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SYS_CREATE_DATE" Nullable="false" />
+          <Property Type="String" Name="SYS_USER_CREATE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SYS_LAST_UPDATE_DATE" />
+          <Property Type="String" Name="SYS_LAST_UPDATE_USER" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblRolePermission" Relationship="ForgetTrafficModel.FK_tblRolePermission_tblPermission" FromRole="tblPermission" ToRole="tblRolePermission" />
+        </EntityType>
+        <EntityType Name="tblRole">
+          <Key>
+            <PropertyRef Name="CodRole" />
+          </Key>
+          <Property Type="Guid" Name="CodRole" Nullable="false" />
+          <Property Type="String" Name="RoleDescription" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RoleTitle" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SYS_STATE" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SYS_CREATE_DATE" Nullable="false" />
+          <Property Type="String" Name="SYS_USER_CREATE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SYS_LAST_UPDATE_DATE" />
+          <Property Type="String" Name="SYS_LAST_UPDATE_USER" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblRolePermission" Relationship="ForgetTrafficModel.FK_tblRolePermission_tblRole" FromRole="tblRole" ToRole="tblRolePermission" />
+          <NavigationProperty Name="tblUserRole" Relationship="ForgetTrafficModel.FK_tblUserRole_tblRole" FromRole="tblRole" ToRole="tblUserRole" />
+        </EntityType>
+        <EntityType Name="tblRolePermission">
+          <Key>
+            <PropertyRef Name="CodRolePermisison" />
+          </Key>
+          <Property Type="Guid" Name="CodRolePermisison" Nullable="false" />
+          <Property Type="Guid" Name="CodRole" Nullable="false" />
+          <Property Type="Guid" Name="CodPermission" Nullable="false" />
+          <NavigationProperty Name="tblPermission" Relationship="ForgetTrafficModel.FK_tblRolePermission_tblPermission" FromRole="tblRolePermission" ToRole="tblPermission" />
+          <NavigationProperty Name="tblRole" Relationship="ForgetTrafficModel.FK_tblRolePermission_tblRole" FromRole="tblRolePermission" ToRole="tblRole" />
+        </EntityType>
+        <EntityType Name="tblSysState">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CodeParent" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SYS_CREATE_DATE" />
+          <Property Type="DateTime" Name="SYS_LAST_MODIFY_DATE" />
+          <Property Type="Binary" Name="SYS_ROWVERSION" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="tblConfirmActions" Relationship="ForgetTrafficModel.FK_tblConfirmActions_tblSysState" FromRole="tblSysState" ToRole="tblConfirmActions" />
+          <NavigationProperty Name="tblTrafficOcurrence" Relationship="ForgetTrafficModel.FK_tblTrafficOcurrence_tblSysState" FromRole="tblSysState" ToRole="tblTrafficOcurrence" />
+        </EntityType>
+        <EntityType Name="tblUserRole">
+          <Key>
+            <PropertyRef Name="CodUserRole" />
+          </Key>
+          <Property Type="Guid" Name="CodUserRole" Nullable="false" />
+          <Property Type="Guid" Name="CodRole" Nullable="false" />
+          <Property Type="Guid" Name="CodUser" Nullable="false" />
+          <NavigationProperty Name="tblRole" Relationship="ForgetTrafficModel.FK_tblUserRole_tblRole" FromRole="tblUserRole" ToRole="tblRole" />
+          <NavigationProperty Name="tblUser" Relationship="ForgetTrafficModel.FK_tblUserRole_tblUser" FromRole="tblUserRole" ToRole="tblUser" />
+        </EntityType>
+        <EntityType Name="tblIncidentVote">
+          <Key>
+            <PropertyRef Name="VoteId" />
+          </Key>
+          <Property Type="Guid" Name="VoteId" Nullable="false" />
+          <Property Type="Guid" Name="IncidentId" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="String" Name="Comment" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="VoteType" Nullable="false" />
+          <Property Type="DateTime" Name="LastModifyDate" />
+          <NavigationProperty Name="tblTrafficOcurrence" Relationship="ForgetTrafficModel.FK_tblIncidentVote_tblTrafficOcurrence" FromRole="tblIncidentVote" ToRole="tblTrafficOcurrence" />
+          <NavigationProperty Name="tblUser" Relationship="ForgetTrafficModel.FK_tblIncidentVote_tblUser" FromRole="tblIncidentVote" ToRole="tblUser" />
+        </EntityType>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Image" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BirthDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecondEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SYS_STATE" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SYS_CREATE_DATE" Nullable="false" />
+          <Property Type="String" Name="SYS_USER_CREATE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SYS_LAST_UPDATE_DATE" />
+          <Property Type="String" Name="SYS_LAST_UPDATE_USER" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblConfirmActions" Relationship="ForgetTrafficModel.FK_tblConfirmActions_tblUser" FromRole="tblUser" ToRole="tblConfirmActions" />
+          <NavigationProperty Name="tblUserRole" Relationship="ForgetTrafficModel.FK_tblUserRole_tblUser" FromRole="tblUser" ToRole="tblUserRole" />
+          <NavigationProperty Name="tblIncidentVote" Relationship="ForgetTrafficModel.FK_tblIncidentVote_tblUser" FromRole="tblUser" ToRole="tblIncidentVote" />
+          <NavigationProperty Name="tblTrafficOcurrence" Relationship="ForgetTrafficModel.FK_tblTrafficOcurrence_tblUser" FromRole="tblUser" ToRole="tblTrafficOcurrence" />
+          <NavigationProperty Name="tblUserProvider" Relationship="ForgetTrafficModel.FK_tblUserProvider_tblUser" FromRole="tblUser" ToRole="tblUserProvider" />
+          <NavigationProperty Name="tblValidationToken" Relationship="ForgetTrafficModel.FK_tblValidationToken_tblUser" FromRole="tblUser" ToRole="tblValidationToken" />
+          <NavigationProperty Name="tblUserProfile" Relationship="ForgetTrafficModel.FK_UserProfile_tblUser" FromRole="tblUser" ToRole="tblUserProfile" />
+        </EntityType>
+        <EntityType Name="tblUserProfile">
+          <Key>
+            <PropertyRef Name="CodUserProfile" />
+          </Key>
+          <Property Type="Guid" Name="CodUserProfile" Nullable="false" />
+          <Property Type="Guid" Name="CodUser" Nullable="false" />
+          <Property Type="Int32" Name="SubimtIncidents" Nullable="false" />
+          <Property Type="Int32" Name="ValidateIncidents" Nullable="false" />
+          <Property Type="Int32" Name="LoginCount" Nullable="false" />
+          <Property Type="Int32" Name="ProfilePoints" Nullable="false" />
+          <Property Type="Int32" Name="VotesCount" Nullable="false" />
+          <Property Type="DateTime" Name="SYS_CREATE_DATE" />
+          <Property Type="DateTime" Name="SYS_LAST_MODIFY_DATE" />
+          <Property Type="Binary" Name="SYS_ROWVERSION" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Type="Boolean" Name="hiddenInformation" />
+          <NavigationProperty Name="tblUser" Relationship="ForgetTrafficModel.FK_UserProfile_tblUser" FromRole="tblUserProfile" ToRole="tblUser" />
+        </EntityType>
+        <EntityType Name="tblOccurrenceType">
+          <Key>
+            <PropertyRef Name="idTypeOccurrence" />
+          </Key>
+          <Property Type="Guid" Name="idTypeOccurrence" Nullable="false" />
+          <Property Type="Int32" Name="OccurrenceLevel" Nullable="false" />
+          <Property Type="String" Name="OccurrenceColor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OccorrenceDescription" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="OccorrenceImage" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="CodOccurrenceType" Nullable="false" />
+          <NavigationProperty Name="tblTrafficOcurrence" Relationship="ForgetTrafficModel.FK_tblTrafficOcurrence_tblOccurrenceType" FromRole="tblOccurrenceType" ToRole="tblTrafficOcurrence" />
+        </EntityType>
+        <EntityType Name="tblTrafficOcurrence">
+          <Key>
+            <PropertyRef Name="idTrafficOccurence" />
+          </Key>
+          <Property Type="Guid" Name="idTrafficOccurence" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="Double" Name="Latitude" Nullable="false" />
+          <Property Type="Double" Name="Longitude" Nullable="false" />
+          <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="OccurrenceType" Nullable="false" />
+          <Property Type="Int32" Name="TipoGravidade" />
+          <Property Type="String" Name="Distrito" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Concelho" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Localidade" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pais" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EstimatedEndDate" />
+          <Property Type="String" Name="Title" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="SYS_STATE" Nullable="false" />
+          <Property Type="DateTime" Name="SYS_CREATE_DATE" Nullable="false" />
+          <Property Type="DateTime" Name="SYS_LAST_MODIFY_DATE" />
+          <Property Type="Binary" Name="SYS_ROWVERSION" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Type="String" Name="CodPais" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PostalCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Adress" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblSysState" Relationship="ForgetTrafficModel.FK_tblTrafficOcurrence_tblSysState" FromRole="tblTrafficOcurrence" ToRole="tblSysState" />
+          <NavigationProperty Name="tblIncidentVote" Relationship="ForgetTrafficModel.FK_tblIncidentVote_tblTrafficOcurrence" FromRole="tblTrafficOcurrence" ToRole="tblIncidentVote" />
+          <NavigationProperty Name="tblUser" Relationship="ForgetTrafficModel.FK_tblTrafficOcurrence_tblUser" FromRole="tblTrafficOcurrence" ToRole="tblUser" />
+          <NavigationProperty Name="tblOccurrenceType" Relationship="ForgetTrafficModel.FK_tblTrafficOcurrence_tblOccurrenceType" FromRole="tblTrafficOcurrence" ToRole="tblOccurrenceType" />
+        </EntityType>
+        <EntityType Name="tblUserProvider">
+          <Key>
+            <PropertyRef Name="IdProvider" />
+          </Key>
+          <Property Type="Guid" Name="IdProvider" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="PassHash" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecretQuestion" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecretAnwser" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Islogged" Nullable="false" />
+          <Property Type="DateTime" Name="LastLoggegDate" Nullable="false" />
+          <Property Type="String" Name="IdStatus" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="PassSalt" MaxLength="200" FixedLength="false" />
+          <Property Type="Int32" Name="LoginCount" />
+          <Property Type="Int32" Name="FailedPasswordAttemptCount" />
+          <Property Type="String" Name="Comment" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SYS_STATE" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SYS_CREATE_DATE" Nullable="false" />
+          <Property Type="String" Name="SYS_USER_CREATE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SYS_LAST_UPDATE_DATE" />
+          <Property Type="String" Name="SYS_LAST_UPDATE_USER" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblUser" Relationship="ForgetTrafficModel.FK_tblUserProvider_tblUser" FromRole="tblUserProvider" ToRole="tblUser" />
+        </EntityType>
+        <EntityType Name="tblValidationToken">
+          <Key>
+            <PropertyRef Name="idIdentityValidation" />
+          </Key>
+          <Property Type="Guid" Name="idIdentityValidation" Nullable="false" />
+          <Property Type="DateTime" Name="AllocationDate" Nullable="false" />
+          <Property Type="String" Name="ValidationToken" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ExperitionTime" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="CommunicationCount" Nullable="false" />
+          <Property Type="String" Name="UnprocessedStringToken" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SYS_STATE" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SYS_CREATE_DATE" Nullable="false" />
+          <Property Type="String" Name="SYS_USER_CREATE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SYS_LAST_UPDATE_DATE" />
+          <Property Type="String" Name="SYS_LAST_UPDATE_USER" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblUser" Relationship="ForgetTrafficModel.FK_tblValidationToken_tblUser" FromRole="tblValidationToken" ToRole="tblUser" />
+        </EntityType>
+        <Association Name="FK_tblConfirmActions_tblSysState">
+          <End Type="ForgetTrafficModel.tblSysState" Role="tblSysState" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblConfirmActions" Role="tblConfirmActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSysState">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblConfirmActions">
+              <PropertyRef Name="ConfirmAction" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblConfirmActions_tblUser">
+          <End Type="ForgetTrafficModel.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblConfirmActions" Role="tblConfirmActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblConfirmActions">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRolePermission_tblPermission">
+          <End Type="ForgetTrafficModel.tblPermission" Role="tblPermission" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblRolePermission" Role="tblRolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblPermission">
+              <PropertyRef Name="CodPermisson" />
+            </Principal>
+            <Dependent Role="tblRolePermission">
+              <PropertyRef Name="CodPermission" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRolePermission_tblRole">
+          <End Type="ForgetTrafficModel.tblRole" Role="tblRole" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblRolePermission" Role="tblRolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRole">
+              <PropertyRef Name="CodRole" />
+            </Principal>
+            <Dependent Role="tblRolePermission">
+              <PropertyRef Name="CodRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblUserRole_tblRole">
+          <End Type="ForgetTrafficModel.tblRole" Role="tblRole" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblUserRole" Role="tblUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRole">
+              <PropertyRef Name="CodRole" />
+            </Principal>
+            <Dependent Role="tblUserRole">
+              <PropertyRef Name="CodRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrafficOcurrence_tblSysState">
+          <End Type="ForgetTrafficModel.tblSysState" Role="tblSysState" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblTrafficOcurrence" Role="tblTrafficOcurrence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSysState">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblTrafficOcurrence">
+              <PropertyRef Name="SYS_STATE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblUserRole_tblUser">
+          <End Type="ForgetTrafficModel.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblUserRole" Role="tblUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblUserRole">
+              <PropertyRef Name="CodUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblIncidentVote_tblTrafficOcurrence">
+          <End Type="ForgetTrafficModel.tblTrafficOcurrence" Role="tblTrafficOcurrence" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblIncidentVote" Role="tblIncidentVote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTrafficOcurrence">
+              <PropertyRef Name="idTrafficOccurence" />
+            </Principal>
+            <Dependent Role="tblIncidentVote">
+              <PropertyRef Name="IncidentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblIncidentVote_tblUser">
+          <End Type="ForgetTrafficModel.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblIncidentVote" Role="tblIncidentVote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblIncidentVote">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrafficOcurrence_tblUser">
+          <End Type="ForgetTrafficModel.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblTrafficOcurrence" Role="tblTrafficOcurrence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblTrafficOcurrence">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblUserProvider_tblUser">
+          <End Type="ForgetTrafficModel.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblUserProvider" Role="tblUserProvider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblUserProvider">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblValidationToken_tblUser">
+          <End Type="ForgetTrafficModel.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblValidationToken" Role="tblValidationToken" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblValidationToken">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_tblUser">
+          <End Type="ForgetTrafficModel.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblUserProfile" Role="tblUserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblUserProfile">
+              <PropertyRef Name="CodUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrafficOcurrence_tblOccurrenceType">
+          <End Type="ForgetTrafficModel.tblOccurrenceType" Role="tblOccurrenceType" Multiplicity="1" />
+          <End Type="ForgetTrafficModel.tblTrafficOcurrence" Role="tblTrafficOcurrence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblOccurrenceType">
+              <PropertyRef Name="idTypeOccurrence" />
+            </Principal>
+            <Dependent Role="tblTrafficOcurrence">
+              <PropertyRef Name="OccurrenceType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ForgetTrafficModelStoreContainer" CdmEntityContainer="ForgetTrafficEntities">
+          <EntitySetMapping Name="tblConfirmActions">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblConfirmActions">
+              <MappingFragment StoreEntitySet="tblConfirmActions">
+                <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+                <ScalarProperty Name="SYS_ROWVERSION" ColumnName="SYS_ROWVERSION" />
+                <ScalarProperty Name="SYS_LAST_MODIFY_DATE" ColumnName="SYS_LAST_MODIFY_DATE" />
+                <ScalarProperty Name="SYS_CREATE_DATE" ColumnName="SYS_CREATE_DATE" />
+                <ScalarProperty Name="ConfirmAction" ColumnName="ConfirmAction" />
+                <ScalarProperty Name="ValidateEndTime" ColumnName="ValidateEndTime" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="IdConfirmActions" ColumnName="IdConfirmActions" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPermission">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblPermission">
+              <MappingFragment StoreEntitySet="tblPermission">
+                <ScalarProperty Name="SYS_LAST_UPDATE_USER" ColumnName="SYS_LAST_UPDATE_USER" />
+                <ScalarProperty Name="SYS_LAST_UPDATE_DATE" ColumnName="SYS_LAST_UPDATE_DATE" />
+                <ScalarProperty Name="SYS_USER_CREATE" ColumnName="SYS_USER_CREATE" />
+                <ScalarProperty Name="SYS_CREATE_DATE" ColumnName="SYS_CREATE_DATE" />
+                <ScalarProperty Name="SYS_STATE" ColumnName="SYS_STATE" />
+                <ScalarProperty Name="PermissionTitle" ColumnName="PermissionTitle" />
+                <ScalarProperty Name="PermissionDescripiton" ColumnName="PermissionDescripiton" />
+                <ScalarProperty Name="CodPermisson" ColumnName="CodPermisson" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblRole">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblRole">
+              <MappingFragment StoreEntitySet="tblRole">
+                <ScalarProperty Name="SYS_LAST_UPDATE_USER" ColumnName="SYS_LAST_UPDATE_USER" />
+                <ScalarProperty Name="SYS_LAST_UPDATE_DATE" ColumnName="SYS_LAST_UPDATE_DATE" />
+                <ScalarProperty Name="SYS_USER_CREATE" ColumnName="SYS_USER_CREATE" />
+                <ScalarProperty Name="SYS_CREATE_DATE" ColumnName="SYS_CREATE_DATE" />
+                <ScalarProperty Name="SYS_STATE" ColumnName="SYS_STATE" />
+                <ScalarProperty Name="RoleTitle" ColumnName="RoleTitle" />
+                <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+                <ScalarProperty Name="CodRole" ColumnName="CodRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblRolePermission">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblRolePermission">
+              <MappingFragment StoreEntitySet="tblRolePermission">
+                <ScalarProperty Name="CodPermission" ColumnName="CodPermission" />
+                <ScalarProperty Name="CodRole" ColumnName="CodRole" />
+                <ScalarProperty Name="CodRolePermisison" ColumnName="CodRolePermisison" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSysState">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblSysState">
+              <MappingFragment StoreEntitySet="tblSysState">
+                <ScalarProperty Name="SYS_ROWVERSION" ColumnName="SYS_ROWVERSION" />
+                <ScalarProperty Name="SYS_LAST_MODIFY_DATE" ColumnName="SYS_LAST_MODIFY_DATE" />
+                <ScalarProperty Name="SYS_CREATE_DATE" ColumnName="SYS_CREATE_DATE" />
+                <ScalarProperty Name="CodeParent" ColumnName="CodeParent" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUserRole">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblUserRole">
+              <MappingFragment StoreEntitySet="tblUserRole">
+                <ScalarProperty Name="CodUser" ColumnName="CodUser" />
+                <ScalarProperty Name="CodRole" ColumnName="CodRole" />
+                <ScalarProperty Name="CodUserRole" ColumnName="CodUserRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblIncidentVote">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblIncidentVote">
+              <MappingFragment StoreEntitySet="tblIncidentVote">
+                <ScalarProperty Name="LastModifyDate" ColumnName="LastModifyDate" />
+                <ScalarProperty Name="VoteType" ColumnName="VoteType" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="IncidentId" ColumnName="IncidentId" />
+                <ScalarProperty Name="VoteId" ColumnName="VoteId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUser">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblUser">
+              <MappingFragment StoreEntitySet="tblUser">
+                <ScalarProperty Name="SYS_LAST_UPDATE_USER" ColumnName="SYS_LAST_UPDATE_USER" />
+                <ScalarProperty Name="SYS_LAST_UPDATE_DATE" ColumnName="SYS_LAST_UPDATE_DATE" />
+                <ScalarProperty Name="SYS_USER_CREATE" ColumnName="SYS_USER_CREATE" />
+                <ScalarProperty Name="SYS_CREATE_DATE" ColumnName="SYS_CREATE_DATE" />
+                <ScalarProperty Name="SYS_STATE" ColumnName="SYS_STATE" />
+                <ScalarProperty Name="SecondEmail" ColumnName="SecondEmail" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUserProfile">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblUserProfile">
+              <MappingFragment StoreEntitySet="tblUserProfile">
+                <ScalarProperty Name="hiddenInformation" ColumnName="hiddenInformation" />
+                <ScalarProperty Name="SYS_ROWVERSION" ColumnName="SYS_ROWVERSION" />
+                <ScalarProperty Name="SYS_LAST_MODIFY_DATE" ColumnName="SYS_LAST_MODIFY_DATE" />
+                <ScalarProperty Name="SYS_CREATE_DATE" ColumnName="SYS_CREATE_DATE" />
+                <ScalarProperty Name="VotesCount" ColumnName="VotesCount" />
+                <ScalarProperty Name="ProfilePoints" ColumnName="ProfilePoints" />
+                <ScalarProperty Name="LoginCount" ColumnName="LoginCount" />
+                <ScalarProperty Name="ValidateIncidents" ColumnName="ValidateIncidents" />
+                <ScalarProperty Name="SubimtIncidents" ColumnName="SubimtIncidents" />
+                <ScalarProperty Name="CodUser" ColumnName="CodUser" />
+                <ScalarProperty Name="CodUserProfile" ColumnName="CodUserProfile" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblOccurrenceType">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblOccurrenceType">
+              <MappingFragment StoreEntitySet="tblOccurrenceType">
+                <ScalarProperty Name="CodOccurrenceType" ColumnName="CodOccurrenceType" />
+                <ScalarProperty Name="OccorrenceImage" ColumnName="OccorrenceImage" />
+                <ScalarProperty Name="OccorrenceDescription" ColumnName="OccorrenceDescription" />
+                <ScalarProperty Name="OccurrenceColor" ColumnName="OccurrenceColor" />
+                <ScalarProperty Name="OccurrenceLevel" ColumnName="OccurrenceLevel" />
+                <ScalarProperty Name="idTypeOccurrence" ColumnName="idTypeOccurrence" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTrafficOcurrence">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblTrafficOcurrence">
+              <MappingFragment StoreEntitySet="tblTrafficOcurrence">
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="CodPais" ColumnName="CodPais" />
+                <ScalarProperty Name="SYS_ROWVERSION" ColumnName="SYS_ROWVERSION" />
+                <ScalarProperty Name="SYS_LAST_MODIFY_DATE" ColumnName="SYS_LAST_MODIFY_DATE" />
+                <ScalarProperty Name="SYS_CREATE_DATE" ColumnName="SYS_CREATE_DATE" />
+                <ScalarProperty Name="SYS_STATE" ColumnName="SYS_STATE" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="EstimatedEndDate" ColumnName="EstimatedEndDate" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+                <ScalarProperty Name="Localidade" ColumnName="Localidade" />
+                <ScalarProperty Name="Concelho" ColumnName="Concelho" />
+                <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+                <ScalarProperty Name="TipoGravidade" ColumnName="TipoGravidade" />
+                <ScalarProperty Name="OccurrenceType" ColumnName="OccurrenceType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="idTrafficOccurence" ColumnName="idTrafficOccurence" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUserProvider">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblUserProvider">
+              <MappingFragment StoreEntitySet="tblUserProvider">
+                <ScalarProperty Name="SYS_LAST_UPDATE_USER" ColumnName="SYS_LAST_UPDATE_USER" />
+                <ScalarProperty Name="SYS_LAST_UPDATE_DATE" ColumnName="SYS_LAST_UPDATE_DATE" />
+                <ScalarProperty Name="SYS_USER_CREATE" ColumnName="SYS_USER_CREATE" />
+                <ScalarProperty Name="SYS_CREATE_DATE" ColumnName="SYS_CREATE_DATE" />
+                <ScalarProperty Name="SYS_STATE" ColumnName="SYS_STATE" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+                <ScalarProperty Name="LoginCount" ColumnName="LoginCount" />
+                <ScalarProperty Name="PassSalt" ColumnName="PassSalt" />
+                <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+                <ScalarProperty Name="LastLoggegDate" ColumnName="LastLoggegDate" />
+                <ScalarProperty Name="Islogged" ColumnName="Islogged" />
+                <ScalarProperty Name="SecretAnwser" ColumnName="SecretAnwser" />
+                <ScalarProperty Name="SecretQuestion" ColumnName="SecretQuestion" />
+                <ScalarProperty Name="PassHash" ColumnName="PassHash" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="IdProvider" ColumnName="IdProvider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblValidationToken">
+            <EntityTypeMapping TypeName="ForgetTrafficModel.tblValidationToken">
+              <MappingFragment StoreEntitySet="tblValidationToken">
+                <ScalarProperty Name="SYS_LAST_UPDATE_USER" ColumnName="SYS_LAST_UPDATE_USER" />
+                <ScalarProperty Name="SYS_LAST_UPDATE_DATE" ColumnName="SYS_LAST_UPDATE_DATE" />
+                <ScalarProperty Name="SYS_USER_CREATE" ColumnName="SYS_USER_CREATE" />
+                <ScalarProperty Name="SYS_CREATE_DATE" ColumnName="SYS_CREATE_DATE" />
+                <ScalarProperty Name="SYS_STATE" ColumnName="SYS_STATE" />
+                <ScalarProperty Name="UnprocessedStringToken" ColumnName="UnprocessedStringToken" />
+                <ScalarProperty Name="CommunicationCount" ColumnName="CommunicationCount" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ExperitionTime" ColumnName="ExperitionTime" />
+                <ScalarProperty Name="ValidationToken" ColumnName="ValidationToken" />
+                <ScalarProperty Name="AllocationDate" ColumnName="AllocationDate" />
+                <ScalarProperty Name="idIdentityValidation" ColumnName="idIdentityValidation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ForgetTrafficEntities">
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblConfirmActions" Width="1.5" PointX="3" PointY="15.375" Height="3.1340950520833388" />
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblPermission" Width="1.5" PointX="3.75" PointY="41.625" Height="2.749492187499996" />
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblRole" Width="1.5" PointX="3.75" PointY="25.5" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblRolePermission" Width="1.5" PointX="6" PointY="26" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblSysState" Width="1.5" PointX="3.75" PointY="8" Height="2.749492187499996" />
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblUserRole" Width="1.5" PointX="6" PointY="16" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblIncidentVote" Width="1.5" PointX="3" PointY="11.625" Height="2.749492187499996" />
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblUser" Width="1.5" PointX="0.75" PointY="14.375" Height="5.057109374999996" />
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblUserProfile" Width="1.5" PointX="3" PointY="20.625" Height="3.326396484374996" />
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblOccurrenceType" Width="1.5" PointX="3.75" PointY="4.5" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblTrafficOcurrence" Width="1.5" PointX="6" PointY="9.125" Height="5.634013671874996" />
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblUserProvider" Width="1.5" PointX="3" PointY="31.125" Height="4.480205078124996" />
+        <EntityTypeShape EntityType="ForgetTrafficModel.tblValidationToken" Width="1.5" PointX="3" PointY="36.375" Height="3.5186979166666674" />
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblConfirmActions_tblSysState" >
+          <ConnectorPoint PointX="4.8750005000000005" PointY="10.749492187499996" />
+          <ConnectorPoint PointX="4.8750005000000005" PointY="16.942047526041669" />
+          <ConnectorPoint PointX="4.5" PointY="16.942047526041669" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblConfirmActions_tblUser" >
+          <ConnectorPoint PointX="2.25" PointY="16.942047526041669" />
+          <ConnectorPoint PointX="3" PointY="16.942047526041669" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblRolePermission_tblPermission" >
+          <ConnectorPoint PointX="5.25" PointY="42.99974609375" />
+          <ConnectorPoint PointX="6.75" PointY="42.99974609375" />
+          <ConnectorPoint PointX="6.75" PointY="27.980286458333339" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblRolePermission_tblRole" >
+          <ConnectorPoint PointX="5.25" PointY="26.990143229166669" />
+          <ConnectorPoint PointX="6" PointY="26.990143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblUserRole_tblRole" >
+          <ConnectorPoint PointX="5.25" PointY="25.501152846153843" />
+          <ConnectorPoint PointX="5.625" PointY="25.126152846153843" />
+          <ConnectorPoint PointX="5.625" PointY="16.990143229166669" />
+          <ConnectorPoint PointX="6" PointY="16.990143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblTrafficOcurrence_tblSysState" >
+          <ConnectorPoint PointX="5.25" PointY="9.937246093749998" />
+          <ConnectorPoint PointX="6" PointY="9.937246093749998" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblUserRole_tblUser" >
+          <ConnectorPoint PointX="2.25" PointY="19.001852213541667" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="19.001852213541667" />
+          <ConnectorPoint PointX="5.708333333333333" PointY="19.001852213541667" />
+          <ConnectorPoint PointX="6.75" PointY="19.001852213541667" />
+          <ConnectorPoint PointX="6.75" PointY="17.980286458333339" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblIncidentVote_tblTrafficOcurrence" >
+          <ConnectorPoint PointX="6" PointY="12.999746093749998" />
+          <ConnectorPoint PointX="4.9583338333333336" PointY="12.999746093749998" />
+          <ConnectorPoint PointX="4.7916671666666675" PointY="12.999746093749998" />
+          <ConnectorPoint PointX="4.5" PointY="12.999746093749998" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblIncidentVote_tblUser" >
+          <ConnectorPoint PointX="1.5" PointY="14.375" />
+          <ConnectorPoint PointX="1.5" PointY="12.999746093749998" />
+          <ConnectorPoint PointX="3" PointY="12.999746093749998" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblTrafficOcurrence_tblUser" >
+          <ConnectorPoint PointX="2.25" PointY="14.567006835937498" />
+          <ConnectorPoint PointX="4.7916671666666675" PointY="14.567006835937498" />
+          <ConnectorPoint PointX="4.9583338333333336" PointY="14.567006835937498" />
+          <ConnectorPoint PointX="6" PointY="14.567006835937498" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblUserProvider_tblUser" >
+          <ConnectorPoint PointX="1.5" PointY="19.432109374999996" />
+          <ConnectorPoint PointX="1.5" PointY="33.3651025390625" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="33.3651025390625" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="33.3651025390625" />
+          <ConnectorPoint PointX="3" PointY="33.3651025390625" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblValidationToken_tblUser" >
+          <ConnectorPoint PointX="1.9062525" PointY="19.432109374999996" />
+          <ConnectorPoint PointX="1.9062525" PointY="38.134348958333334" />
+          <ConnectorPoint PointX="3" PointY="38.134348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_UserProfile_tblUser" >
+          <ConnectorPoint PointX="1.0937475" PointY="19.432109374999996" />
+          <ConnectorPoint PointX="1.0937475" PointY="22.288198242187498" />
+          <ConnectorPoint PointX="1.4166666666666667" PointY="22.288198242187498" />
+          <ConnectorPoint PointX="1.5833333333333333" PointY="22.288198242187498" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="22.288198242187498" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="22.288198242187498" />
+          <ConnectorPoint PointX="3" PointY="22.288198242187498" />
+        </AssociationConnector>
+        <AssociationConnector Association="ForgetTrafficModel.FK_tblTrafficOcurrence_tblOccurrenceType" >
+          <ConnectorPoint PointX="5.25" PointY="5.6824446614583337" />
+          <ConnectorPoint PointX="6.75" PointY="5.6824446614583337" />
+          <ConnectorPoint PointX="6.75" PointY="9.125" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

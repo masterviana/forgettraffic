@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta name="description" content="" /><meta name="keywords" content="" /><link rel="canonical" href="http://www.forgetTraffic.net" />
+<meta name='description' content='Informações de Transito em tempo real, de forma cooperativa onde os utilizadores são a principal fonte de informação.' />
+<meta name='keywords' content="software, android, transito, applicação android, android, api livre, sistema colaborativo de gestao transito, REST, RESTFUL, WCF,
+ visualizar transito, problemas transito, congestionamento trafico,congestionamento trafego, imagens, image, internet, wireless, download, código aberto, Sistema Comunitario,
+Fernando Vaz, Vitor Viana, Projecto Final, ISEL, Instituto Superior de Engenharia de Lisboa, 2010,2011,2012, Android 2.1,Android 2.2, Esqueça o Transito, Sistema colaborativo, Comunidade de Transito,
+traffic conditions, application android, android traffic, aplicacao transito android" />
+
+    <link rel="shortcut icon" href="<%=Url.Content("~/Content/images/logo01b.jpg")%>">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="../../Content/style.css" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~/Content/jquery-ui-1.8.16.custom.css")%>" rel="stylesheet" type="text/css" />
+     <link href="<%=Url.Content("~/Content/structure.css")%>" rel="stylesheet" type="text/css" />
+     <link href="<%=Url.Content("~/Content/reset.css")%>" rel="stylesheet" type="text/css" />
+      <link href="<%=Url.Content("~/Content/jquery.jgrowl.css")%>" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery-1.6.2.js")%>"> </script> 
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.cookie.js")%>"> </script> 
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.json-2.2.js")%>"> </script> 
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.timers-1.2.js")%>"> </script> 
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery-ui-1.8.16.custom.min.js")%>"> </script> 
+    <script type="text/javascript" src="<%=Url.Content("~/Scripts/jquery.jgrowl.js")%>"> </script> 
+    
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-24079210-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+</script>
+
+
+
+
+
+<meta name="google-site-verification" content="dX-nQ9Iw97OOdKCLWg_ucGR8eHiE6ZMJGI_eWBwUXew" />
+</head>
+
+<body>
+<div id="wrapper">
+
+	<div id="header">
+        <div id="cont_header">
+    		    <div id="logo">
+                
+    			    <h1><a href="/">Forget Traffic   <img src="http://dl.dropbox.com/u/3343576/forgettraffic_img/ft_logo.png"  alt="Forget traffic" style="margin:0px;padding: 0px 0px 0px 0px;text-align:right;"  /></a></h1>    
+                   
+    		    </div>
+             
+                
+    		     <div id="menu">
+                      <ul id="mainlevel-nav">              
+                        <li class="mainlevel-nav"><%:Html.ActionLink("Home", "Index", "Home")%></li>
+                        <li class="mainlevel-nav"><%:Html.ActionLink("Live Traffic", "ViewTraffic", "Home")%></li>
+                        <li class="mainlevel-nav"><%:Html.ActionLink("What's New", "News", "Home")%></li>
+                        <li class="mainlevel-nav"><%:Html.ActionLink("Community", "Community", "Home")%></li>
+                        <%
+                             var cookie = Request.Cookies["InfoUser"];
+                             if ((cookie != null && cookie.Value != null) )
+                                if(cookie.Value != String.Empty)
+                             {
+                                 if (cookie["IsAdmin"] != null)
+                                 {
+                                     bool isAdmin = Convert.ToBoolean(cookie["IsAdmin"].ToString());
+                                     if(isAdmin){%>
+                                <li class="mainlevel-nav"><%:Html.ActionLink("Administration", "Index", "Admin")%></li>
+                            <%
+                                     }
+                                 }
+                             }%>
+                        	<li class="mainlevel-nav">
+							<div class="itp-share-gone">
+								<!-- Inclua esta tag na seção head ou logo antes da tag de fechamento da seção body -->
+								<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+								<!-- Inclua esta tag onde desejar que o botão +1 seja exibido -->
+								<g:plusone size="medium" href="http://www.forgettraffic.net" count="true"></g:plusone>
+							</div>
+						</li>
+                        <li>
+                        </li>
+                    </ul>
+    		    </div>
+                
+            </div>
+	</div>
+
+   	<div id="page">
+        <div id="page-bgtop">
+            <div id="page-bgbtm">
+                <div id="content">
+                    <div>
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+
+                <div id="sidebar">
+                  <asp:ContentPlaceHolder ID="LateralMenu" runat="server" />
+                  <asp:ContentPlaceHolder ID="LogOnInfo" runat="server" />
+                </div>
+
+                <div class="clear">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    
+     <div style="background-image:url('docs/Logos/logo_banner.jpg')"></div>
+    <div id="footer">
+        		
+              <div style="vertical-align:top" >
+                    <p style="vertical-align: top"  >Forget Traffic V1.0 @2011 - Vitor Viana & Fernando Vaz<img src="http://dl.dropbox.com/u/3343576/forgettraffic_img/ft_logo_footer.png" alt="" style="margin:0px;padding: 0px 0px 0px 0px;text-align:right;"  /></p>
+              </div>
+		
+    </div>
+
+</div>
+
+</body>
+</html>

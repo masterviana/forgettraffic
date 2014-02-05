@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Content>
+  <User>
+    <UserName>Master</UserName>
+    <CreateDate>01/05/2011</CreateDate>
+    <FirstName>Vitor</FirstName>
+    <LastName>Viana</LastName>
+    <Email>
+      masterviana@gmail.com
+    </Email>
+  </User>
+  <User>
+    <UserName>fmlVaz</UserName>
+    <CreateDate>03/05/2011</CreateDate>
+    <FirstName>Fernando</FirstName>
+    <LastName>Vaz</LastName>
+    <Email>fmlvaz@gmail.com</Email>
+  </User>
+  <User>
+    <UserName>lynkx</UserName>
+    <CreateDate>03/05/2011</CreateDate>
+    <FirstName>Joao</FirstName>
+    <LastName>Sousa</LastName>
+    <Email>jsousa@gmail.com</Email>
+  </User>
+  <User>
+    <UserName>
+      Cruz<</UserName>
+    <CreateDate>03/05/2011</CreateDate>
+    <FirstName>José</FirstName>
+    <LastName>Cruz</LastName>
+    <Email>cruz@gmail.com</Email>
+  </User>
+</Content>

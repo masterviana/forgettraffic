@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="248138cf-8101-450e-820b-c861b1dd9204" name="RoleBaseControl" linkedPackageId="da1dc25c-9b8f-41c1-9e88-884e6f49e142" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="d410f40c-428b-4fd8-b2ba-4ea03339c943" name="IIdentity" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0d27b67a-bd9f-4461-ae86-ae255454783c" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="4d90dd5b-5607-4a32-bd5a-95b7610b51ab" name="IPrincipal" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4239da46-b7f3-44bb-b313-e79687343f14" />
+        <targetEnds>
+          <association Id="8afec9e4-8169-4f14-b31a-b574b3f20c42" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="d410f40c-428b-4fd8-b2ba-4ea03339c943" LastKnownName="IIdentity" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bd340383-5c84-44f1-905e-903c074cd78b" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="71a8f254-29d0-4abf-a250-9f669acc8e97" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ffebd66f-fe7e-42be-8ceb-34b93ce286e7" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="49ef37ef-8150-4fe9-bc37-5a27cdfa21d7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="202dbe09-6201-45d8-b8fb-0105ea5211ef" />
+          </association>
+        </targetEnds>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ef320867-ad01-4ec4-9c16-7f983f144db0" name="UserPrincipal" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="207fe5f4-13c9-4358-95f6-3e40f50d7787" />
+        <suppliersInternal>
+          <dependency Id="5f46b4a0-dc72-4cf5-ae28-16d6ba3e746b">
+            <interfaceMoniker Id="4d90dd5b-5607-4a32-bd5a-95b7610b51ab" LastKnownName="IPrincipal" />
+            <elementDefinition Id="a77b722e-2cf8-4a5d-8816-c4c62f1fc450" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="5382a15e-0bc9-4e79-9526-73fd2db4751c" name="IPermission" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="783c74f2-3d53-4965-9b49-4f883f0f2ffa" />
+        <ownedOperations>
+          <operation Id="948409db-0815-4ac6-acc5-c701664e91c4" name="Demand" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2a7a663e-9708-4782-b9b9-1c4b0d58605c" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5f2d8088-ab53-463b-b28d-6a620dd23dd7" name="Permission" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="74c5752d-bc72-40b3-8ebc-e728502d300b" />
+        <suppliersInternal>
+          <dependency Id="0123f596-ffc7-4379-b46d-6927d9633fa3">
+            <interfaceMoniker Id="5382a15e-0bc9-4e79-9526-73fd2db4751c" LastKnownName="IPermission" />
+            <elementDefinition Id="d7b0783d-0a1a-43cc-97a2-d8757ec406dd" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="169ba8c6-828f-4006-be44-2ad9f795bb7b" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="af3b6ae5-9eb4-4e2f-907b-3112f46004a3" LastKnownName="RoleProvider" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c7a75473-2b0c-401d-9416-aebe3fc1550a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="deec837c-9378-4e48-bd57-bbd04f9dcb84" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d93deb5a-6300-42b7-adbe-d5f4286850c6" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="fb35a965-c77f-43f9-bcb3-c1138a5b9dac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2c0c1122-2d3e-4e54-8f8b-ca9a69b8084f" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="0ce5ea53-fbfb-4f9f-9196-47f423a43579" name="Demand" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d3cb356c-a85a-488c-8adf-1f62a8f8e9a8" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="af3b6ae5-9eb4-4e2f-907b-3112f46004a3" name="RoleProvider" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="32a777be-ec12-4fd8-9886-23832926fb27" />
+        <ownedOperationsInternal>
+          <operation Id="10ac10be-c066-41bf-a3dd-a1ca081230fe" name="string[] GetAllRoles" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ecd04b5a-24ea-40ab-af36-5a6064b0f2f2" />
+          </operation>
+          <operation Id="2793d250-0e1a-4c4f-8de2-0647578efac6" name="string[] GetRolesForUser" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="accd630e-4e48-4ade-8611-7f67e688db0f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e04549a4-1524-4a06-b63e-a2ca9f34c2d7" name="string username" direction="In" isUnique="false">
+                  <elementDefinition Id="436d8d4b-8750-4663-965c-937f8944f367" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5cb4c263-f7a0-4a05-b8bf-8e28c6f46c39" name="string[] GetUsersInRole" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e3df69fe-8bfa-47ed-a6af-177e903b82b8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="33467b68-a39c-46fe-ba3c-52d69c94fb22" name="string roleName" direction="In" isUnique="false">
+                  <elementDefinition Id="ecd4f5dd-53e7-404b-8b1a-406b955b9b9e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="4b6f8d80-b9f4-4e4e-863d-f5c843f5237e" name="CodeAccessSecurityAttribute" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8048c737-860f-4d27-9ce2-af775614b17a" />
+        <targetEnds>
+          <association Id="e8a57b57-4e3d-4579-937f-09433da7b988" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5f2d8088-ab53-463b-b28d-6a620dd23dd7" LastKnownName="Permission" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2c44f63c-46fc-431b-9d32-a022c94b3398" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="35b53ec3-585d-4dd4-9469-82fb7216040f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7decbfe3-906c-427f-89d5-8ae2d84dea59" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="5f70278d-64d4-454d-aa37-f9838b63302b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4b85f3fe-c5b3-4575-9265-bd5f25390ef6" />
+          </association>
+        </targetEnds>
+        <ownedOperations>
+          <operation Id="b7621f61-b1c7-4692-aade-a0e5e046c239" name="IPermission CreatePermission" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f0a58df0-5d32-44d5-b269-0d44889f4997" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="da1dc25c-9b8f-41c1-9e88-884e6f49e142" name="ForgetTraffic.ModelLayer">
+    <elementDefinition Id="3d1a4293-7d2e-48fd-8a19-ec6b0156302a" />
+    <profileInstances>
+      <packageHasProfileInstances Id="bb8f5afa-d2e0-47bf-8172-042ce7b52271">
+        <profileInstance Id="72602bb6-b7b2-4723-80b6-0caa9290df01" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="12fb356e-6a3c-4615-8869-d09becb74280">
+        <profileInstance Id="04133b7f-3f79-4a5e-9a75-03e58a20edb7" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

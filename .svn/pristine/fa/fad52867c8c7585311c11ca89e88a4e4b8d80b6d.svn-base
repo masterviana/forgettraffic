@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78EF8E01-05F7-4640-B33C-1643E0B2AEC3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ForgetTraffic.Service</RootNamespace>
+    <AssemblyName>ForgetTraffic.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ForgetTrafficService.svc.cs">
+      <DependentUpon>ForgetTrafficService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ForgetTrafficService.svc" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ForgetTraffic.Adminstration\ForgetTraffic.Adminstration.csproj">
+      <Project>{001BBFB2-30A2-4524-8A93-F2AEE7EF8784}</Project>
+      <Name>ForgetTraffic.Adminstration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.Autentication\ForgetTraffic.Autentication.csproj">
+      <Project>{1AA991E5-83FF-46E0-9FCF-02A655918111}</Project>
+      <Name>ForgetTraffic.Autentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.DAL\ForgetTraffic.DAL.csproj">
+      <Project>{2C207E0D-E9D9-4501-94BC-149C1EAD2E5F}</Project>
+      <Name>ForgetTraffic.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.DataModel\ForgetTraffic.DataModel.csproj">
+      <Project>{758CEAC4-52F6-4298-BC8A-56A62A028A9A}</Project>
+      <Name>ForgetTraffic.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.DataTypes\ForgetTraffic.DataTypes.csproj">
+      <Project>{F60C4631-CF0D-4ABC-A76B-554B4E743A28}</Project>
+      <Name>ForgetTraffic.DataTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.InitializeStructure\ForgetTraffic.InitializeStructure.csproj">
+      <Project>{A6896058-D949-43A7-A4C4-DAD45BCE5201}</Project>
+      <Name>ForgetTraffic.InitializeStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.ParallelsServices\ForgetTraffic.ParallelsServices.csproj">
+      <Project>{90FB5DCA-7793-4FB0-B230-3FD457012FE7}</Project>
+      <Name>ForgetTraffic.ParallelsServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForgetTraffic.TrafficIncidences\ForgetTraffic.TrafficIncidences.csproj">
+      <Project>{53BCFA2F-3DF2-42AC-B1CD-98B9F76959E4}</Project>
+      <Name>ForgetTraffic.TrafficIncidences</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>32559</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/ForgetTraffic.Service</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <EnableWcfTestClientForSVCDefaultValue>True</EnableWcfTestClientForSVCDefaultValue>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

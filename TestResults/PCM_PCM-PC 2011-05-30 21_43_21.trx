@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="6a972c5a-ce92-4497-9349-15587c25065c" name="PCM@PCM-PC 2011-05-30 21:43:21" runUser="PCM-PC\PCM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="2ee30008-8016-4a5f-bc3d-9decacd65fb8">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="PCM_PCM-PC 2011-05-30 21_43_21">
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DataModel\bin\Debug\ForgetTraffic.DataModel.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\bin\Debug\ForgetTraffic.DAL.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.Autentication\bin\Debug\ForgetTraffic.Autentication.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.ServicesUtils\bin\Debug\ForgetTraffic.ServicesUtils.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-05-30T21:43:21.9105831+01:00" queuing="2011-05-30T21:43:22.1645977+01:00" start="2011-05-30T21:43:22.2216009+01:00" finish="2011-05-30T21:43:24.5517342+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" passed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateUserTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" priority="1" id="5552bc4b-a2ea-2fee-5268-8a8c4486979b">
+      <Execution id="6a38dbbc-6127-4883-8ff0-59089644cc81" />
+      <TestMethod codeBase="E:/3. I.S.E.L/ISEL 2011/Projecto/ProjectosVS/ForgetTraffic/ForgetTrafficTests.Autentication/bin/Debug/ForgetTrafficTests.Autentication.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ForgetTrafficTests.Autentication.AccountManagerTest, ForgetTrafficTests.Autentication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateUserTest" />
+    </UnitTest>
+    <UnitTest name="CreateUpdateProviderUserProviderTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" priority="2" id="afc8ea1b-2a52-0c03-e646-da2b450e1f64">
+      <Execution id="91e0c197-fca7-49e2-9a88-d5af3c4d74fc" />
+      <TestMethod codeBase="E:/3. I.S.E.L/ISEL 2011/Projecto/ProjectosVS/ForgetTraffic/ForgetTrafficTests.Autentication/bin/Debug/ForgetTrafficTests.Autentication.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ForgetTrafficTests.Autentication.AccountManagerTest, ForgetTrafficTests.Autentication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateUpdateProviderUserProviderTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="dfrgre" id="bb2b8806-9051-4b53-bd3e-174b9d2b51b8" parentListId="b3bfb357-bfcb-4e08-b247-8b99cc580d1a">
+      <TestLinks>
+        <TestLink id="5552bc4b-a2ea-2fee-5268-8a8c4486979b" name="CreateUserTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestLink id="afc8ea1b-2a52-0c03-e646-da2b450e1f64" name="CreateUpdateProviderUserProviderTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestLinks>
+    </TestList>
+    <TestList name="Lista de TEste" id="b3bfb357-bfcb-4e08-b247-8b99cc580d1a" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6" />
+    <TestList name="Lists of Results" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="afc8ea1b-2a52-0c03-e646-da2b450e1f64" executionId="91e0c197-fca7-49e2-9a88-d5af3c4d74fc" testListId="bb2b8806-9051-4b53-bd3e-174b9d2b51b8" />
+    <TestEntry testId="5552bc4b-a2ea-2fee-5268-8a8c4486979b" executionId="6a38dbbc-6127-4883-8ff0-59089644cc81" testListId="bb2b8806-9051-4b53-bd3e-174b9d2b51b8" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="91e0c197-fca7-49e2-9a88-d5af3c4d74fc" testId="afc8ea1b-2a52-0c03-e646-da2b450e1f64" testName="CreateUpdateProviderUserProviderTest" computerName="PCM-PC" duration="00:00:00.3559578" startTime="2011-05-30T21:43:22.2506026+01:00" endTime="2011-05-30T21:43:22.9356418+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="bb2b8806-9051-4b53-bd3e-174b9d2b51b8" relativeResultsDirectory="91e0c197-fca7-49e2-9a88-d5af3c4d74fc">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Fail failed. Assert.Equals should not be used for Assertions. Please use Assert.AreEqual &amp; overloads instead.</Message>
+          <StackTrace>   at ForgetTrafficTests.Autentication.AccountManagerTest.CreateUpdateProviderUserProviderTest() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTrafficTests.Autentication\AccountManagerTest.cs:line 123
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6a38dbbc-6127-4883-8ff0-59089644cc81" testId="5552bc4b-a2ea-2fee-5268-8a8c4486979b" testName="CreateUserTest" computerName="PCM-PC" duration="00:00:00.0679609" startTime="2011-05-30T21:43:22.9386419+01:00" endTime="2011-05-30T21:43:23.0106461+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="bb2b8806-9051-4b53-bd3e-174b9d2b51b8" relativeResultsDirectory="6a38dbbc-6127-4883-8ff0-59089644cc81">
+    </UnitTestResult>
+  </Results>
+</TestRun>

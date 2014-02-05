@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="90c7df55-4176-4f5c-a792-de1713b86d12" name="PCM@PCM-PC 2011-06-02 23:03:52" runUser="PCM-PC\PCM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="2ee30008-8016-4a5f-bc3d-9decacd65fb8">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="PCM_PCM-PC 2011-06-02 23_03_52">
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.ServicesUtils\bin\Debug\ForgetTraffic.ServicesUtils.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DataModel\bin\Debug\ForgetTraffic.DataModel.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DataTypes\bin\Debug\ForgetTraffic.DataTypes.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.Autentication\bin\Debug\ForgetTraffic.Autentication.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\bin\Debug\ForgetTraffic.DAL.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-06-02T23:03:52.3931026+01:00" queuing="2011-06-02T23:03:52.8841307+01:00" start="2011-06-02T23:03:52.9221328+01:00" finish="2011-06-02T23:03:55.6042863+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateTokenForUserRequestTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" id="211bd47b-16c3-d2ff-bc47-2a57c6445bd0">
+      <Execution id="373888d6-7964-44e2-a2cc-80680f48468f" />
+      <TestMethod codeBase="E:/3. I.S.E.L/ISEL 2011/Projecto/ProjectosVS/ForgetTraffic/ForgetTrafficTests.Autentication/bin/Debug/ForgetTrafficTests.Autentication.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ForgetTrafficTests.Autentication.SessionCredentialProviderManagerTest, ForgetTrafficTests.Autentication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateTokenForUserRequestTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="211bd47b-16c3-d2ff-bc47-2a57c6445bd0" executionId="373888d6-7964-44e2-a2cc-80680f48468f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="373888d6-7964-44e2-a2cc-80680f48468f" testId="211bd47b-16c3-d2ff-bc47-2a57c6445bd0" testName="CreateTokenForUserRequestTest" computerName="PCM-PC" duration="00:00:00.6453602" startTime="2011-06-02T23:03:52.9511345+01:00" endTime="2011-06-02T23:03:54.0021946+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="373888d6-7964-44e2-a2cc-80680f48468f">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ForgetTrafficTests.Autentication.SessionCredentialProviderManagerTest.CreateTokenForUserRequestTest threw exception: 
+System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---&gt; System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.</Message>
+          <StackTrace>    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+ --- End of inner exception stack trace ---
+    at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   at System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at ForgetTraffic.DAL.EFRepository.EfUnitOfWork.Commit() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EFRepository\EfUnitOfWork.cs.cs:line 34
+   at ForgetTraffic.DAL.EFRepository.UnitOfWork.Commit() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EFRepository\UnitOfWork.cs:line 38
+   at ForgetTraffic.DAL.EntitiesManagers.GeneralManager.Commit() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EntitiesManagers\GeneralManager.cs:line 44
+   at ForgetTrafficTests.Autentication.SessionCredentialProviderManagerTest.CreateTokenForUserRequestTest() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTrafficTests.Autentication\SessionCredentialProviderManagerTest.cs:line 98
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

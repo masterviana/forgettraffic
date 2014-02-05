@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F60C4631-CF0D-4ABC-A76B-554B4E743A28}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ForgetTraffic.DataTypes</RootNamespace>
+    <AssemblyName>ForgetTraffic.DataTypes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\cdoCreateUser.cs" />
+    <Compile Include="Authentication\cdos.cs" />
+    <Compile Include="Authentication\LoginToken.cs" />
+    <Compile Include="Authentication\ResendMessage.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="ErrorConsts.cs" />
+    <Compile Include="Error\ForgetTrafficError.cs" />
+    <Compile Include="Incident\KindsIncident.cs" />
+    <Compile Include="Incident\OcurrDescriptin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Incident\VotesIncidentsTypes.cs" />
+    <Compile Include="Interfaces\IncidentCheck.cs" />
+    <Compile Include="Interfaces\IGenericService.cs" />
+    <Compile Include="Interfaces\IRestService.cs" />
+    <Compile Include="ManagementErrors.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfaces\IForgetTraffic.cs" />
+    <Compile Include="RestTypes\Admin\AdminConfiguration.cs" />
+    <Compile Include="RestTypes\Admin\AdminUser.cs" />
+    <Compile Include="RestTypes\Admin\EmailOperations.cs" />
+    <Compile Include="RestTypes\Admin\ListItensSet.cs" />
+    <Compile Include="RestTypes\Admin\UpdateAdministrator.cs" />
+    <Compile Include="RestTypes\Admin\FilterItens.cs" />
+    <Compile Include="RestTypes\EndPoints.cs" />
+    <Compile Include="RestTypes\Incidents\AddIncident.cs" />
+    <Compile Include="RestTypes\Incidents\UpdateUser.cs" />
+    <Compile Include="RestTypes\Users\AddUser.cs" />
+    <Compile Include="RestTypes\Users\DeleteUser.cs" />
+    <Compile Include="RestTypes\Users\ResponseUser.cs" />
+    <Compile Include="RestTypes\Users\UpdateUser.cs" />
+    <Compile Include="SecurityLibrary.cs" />
+    <Compile Include="SysCodes.cs" />
+    <Compile Include="UrlAdress.cs" />
+    <Compile Include="Authentication\UserInfo.cs" />
+    <Compile Include="Wrappers\IForgetTrafficWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
+    <Folder Include="ServiceProcessIncidents\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ForgetTraffic.DataModel\ForgetTraffic.DataModel.csproj">
+      <Project>{758CEAC4-52F6-4298-BC8A-56A62A028A9A}</Project>
+      <Name>ForgetTraffic.DataModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

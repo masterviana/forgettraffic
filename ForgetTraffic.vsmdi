@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestLists xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestList name="3.Desactivar" id="00011763-bf0d-4278-9426-b003925358b3" parentListId="b3bfb357-bfcb-4e08-b247-8b99cc580d1a">
+    <TestLinks>
+      <TestLink id="4803f2e3-405f-d3e4-7e10-cfaa464b56af" name="DeactiveUser" storage="forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="4.Apagar" id="08c5a6e7-06e5-41ec-a051-5e30e00781b1" parentListId="b3bfb357-bfcb-4e08-b247-8b99cc580d1a">
+    <TestLinks>
+      <TestLink id="50a0a843-a16c-432c-cbf5-9d2524a552fa" name="DeleteUser" storage="forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="2.Criar Provider" id="2642ac4d-e126-486b-8ff4-00728430ab1b" parentListId="b3bfb357-bfcb-4e08-b247-8b99cc580d1a">
+    <TestLinks>
+      <TestLink id="afc8ea1b-2a52-0c03-e646-da2b450e1f64" name="CreateUpdateProviderUserProviderTest" storage="forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Lists of Tests" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <RunConfiguration id="2ee30008-8016-4a5f-bc3d-9decacd65fb8" name="Local" storage="local.testsettings" type="Microsoft.VisualStudio.TestTools.Common.TestRunConfiguration, Microsoft.VisualStudio.QualityTools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestList>
+  <TestList name="Lista de TEste" id="b3bfb357-bfcb-4e08-b247-8b99cc580d1a" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6" />
+  <TestList name="1.Criar" id="bb2b8806-9051-4b53-bd3e-174b9d2b51b8" parentListId="b3bfb357-bfcb-4e08-b247-8b99cc580d1a">
+    <TestLinks>
+      <TestLink id="5552bc4b-a2ea-2fee-5268-8a8c4486979b" name="CreateUserTest" storage="forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+</TestLists>

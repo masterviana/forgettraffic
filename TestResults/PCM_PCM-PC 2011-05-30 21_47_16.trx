@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2b62a2a5-2590-4beb-85fd-3fd5a4800b2d" name="PCM@PCM-PC 2011-05-30 21:47:16" runUser="PCM-PC\PCM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="2ee30008-8016-4a5f-bc3d-9decacd65fb8">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="PCM_PCM-PC 2011-05-30 21_47_16">
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DataModel\bin\Debug\ForgetTraffic.DataModel.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\bin\Debug\ForgetTraffic.DAL.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.Autentication\bin\Debug\ForgetTraffic.Autentication.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.ServicesUtils\bin\Debug\ForgetTraffic.ServicesUtils.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-05-30T21:47:16.0649760+01:00" queuing="2011-05-30T21:47:16.2979893+01:00" start="2011-05-30T21:47:16.3459921+01:00" finish="2011-05-30T21:47:18.6671248+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateUserTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" priority="1" id="5552bc4b-a2ea-2fee-5268-8a8c4486979b">
+      <Execution id="ab5be808-495f-49af-98ef-5120c90e52be" />
+      <TestMethod codeBase="E:/3. I.S.E.L/ISEL 2011/Projecto/ProjectosVS/ForgetTraffic/ForgetTrafficTests.Autentication/bin/Debug/ForgetTrafficTests.Autentication.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ForgetTrafficTests.Autentication.AccountManagerTest, ForgetTrafficTests.Autentication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateUserTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="1.Criar" id="bb2b8806-9051-4b53-bd3e-174b9d2b51b8" parentListId="b3bfb357-bfcb-4e08-b247-8b99cc580d1a">
+      <TestLinks>
+        <TestLink id="5552bc4b-a2ea-2fee-5268-8a8c4486979b" name="CreateUserTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestLinks>
+    </TestList>
+    <TestList name="Lista de TEste" id="b3bfb357-bfcb-4e08-b247-8b99cc580d1a" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6" />
+    <TestList name="Lists of Results" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5552bc4b-a2ea-2fee-5268-8a8c4486979b" executionId="ab5be808-495f-49af-98ef-5120c90e52be" testListId="bb2b8806-9051-4b53-bd3e-174b9d2b51b8" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ab5be808-495f-49af-98ef-5120c90e52be" testId="5552bc4b-a2ea-2fee-5268-8a8c4486979b" testName="CreateUserTest" computerName="PCM-PC" duration="00:00:00.4046741" startTime="2011-05-30T21:47:16.3759938+01:00" endTime="2011-05-30T21:47:17.1220365+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="bb2b8806-9051-4b53-bd3e-174b9d2b51b8" relativeResultsDirectory="ab5be808-495f-49af-98ef-5120c90e52be">
+    </UnitTestResult>
+  </Results>
+</TestRun>

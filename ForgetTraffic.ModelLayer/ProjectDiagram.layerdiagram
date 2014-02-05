@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="cf26bd1d-105b-4ab4-8a6b-2cc5aaa2231d" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="303e6b1d-65fe-404c-bf43-f445b286bed4" name="Arquitectura Solução">
+      <childLayers>
+        <layer Id="c7972be8-3825-4f63-90dc-4716245b9978" name="Serviço REST&#xD;&#xA;">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="92fea631-b939-40fb-bd24-5c80a3d61a4a" direction="Bidirectional">
+              <layerMoniker Id="3266636d-1104-417a-9c06-ab3a98ad4c3b" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="abdbc469-e8b0-4ca8-aded-702a725c4eec" name="Autênticação" />
+            <layer Id="6e41de46-8798-44b7-9733-04d8e5caabf4" name="Modelo de Dados" />
+            <layer Id="c59a42d1-446a-4984-8071-7dc60d7cad99" name="Gestão Incidências" />
+          </childLayers>
+        </layer>
+        <layer Id="3266636d-1104-417a-9c06-ab3a98ad4c3b" name="API Forget Traffic" />
+        <layer Id="7e1afb79-1175-41fd-87ef-554c9590b851" name="Aplicação &#xD;&#xA;Android">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="0e20687e-f149-4f55-af07-3021f0c93338" direction="Bidirectional">
+              <layerMoniker Id="c7972be8-3825-4f63-90dc-4716245b9978" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="234fe5b2-a175-4c0d-b675-cdeeb451981e" name="Web Site">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="69584fee-bb7d-4e1b-bd8a-84fab0988150" direction="Bidirectional">
+              <layerMoniker Id="c7972be8-3825-4f63-90dc-4716245b9978" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="5c5bef03-16dc-4225-86ff-1b15f8ac074a" name="Google Maps">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="bec0af38-52d6-4640-a63d-199588d6d3c7" direction="Bidirectional">
+              <layerMoniker Id="234fe5b2-a175-4c0d-b675-cdeeb451981e" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="59a06dbe-6ce8-4fa0-b632-daa279e4a9fa" direction="Bidirectional">
+              <layerMoniker Id="7e1afb79-1175-41fd-87ef-554c9590b851" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

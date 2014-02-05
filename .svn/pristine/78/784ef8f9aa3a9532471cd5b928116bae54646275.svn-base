@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="19afdc69-d55f-40c4-8721-947666c5846a" name="PCM@PCM-PC 2011-05-30 21:47:21" runUser="PCM-PC\PCM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="2ee30008-8016-4a5f-bc3d-9decacd65fb8">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="PCM_PCM-PC 2011-05-30 21_47_21">
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DataModel\bin\Debug\ForgetTraffic.DataModel.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\bin\Debug\ForgetTraffic.DAL.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.Autentication\bin\Debug\ForgetTraffic.Autentication.dll" />
+      <DeploymentItem filename="E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.ServicesUtils\bin\Debug\ForgetTraffic.ServicesUtils.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-05-30T21:47:21.8673079+01:00" queuing="2011-05-30T21:47:21.9523127+01:00" start="2011-05-30T21:47:21.9623133+01:00" finish="2011-05-30T21:47:22.6913550+01:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="PCM-PC" outcome="Error" timestamp="2011-05-30T21:47:22.6013499+01:00">
+        <Text>One of the background threads threw exception: 
+System.ArgumentException: The supplied connection string is not valid, because it contains insufficient mapping or metadata information.
+Parameter name: connectionString ---&gt; System.InvalidOperationException: Handle is not initialized.
+   at System.WeakReference.set_Target(Object value)
+   at System.Data.Metadata.Edm.MetadataCache.MetadataEntry.EnsureToken()
+   at System.Data.Metadata.Edm.MetadataCache.GetCacheEntry[T](Dictionary`2 cache, String cacheKey, Object objectToLock, IMetadataEntryConstructor`1 metadataEntry, Object&amp; entryToken)
+   at System.Data.Metadata.Edm.MetadataCache.GetOrCreateEdmItemCollection(String cacheKey, MetadataArtifactLoader loader, Object&amp; entryToken)
+   at System.Data.EntityClient.EntityConnection.LoadEdmItemCollection(MetadataWorkspace workspace, MetadataArtifactLoader artifactLoader)
+   at System.Data.EntityClient.EntityConnection.GetMetadataWorkspace(Boolean initializeAllCollections)
+   at System.Data.Objects.ObjectContext.RetrieveMetadataWorkspaceFromConnection()
+   at System.Data.Objects.ObjectContext..ctor(EntityConnection connection, Boolean isConnectionConstructor)
+   --- End of inner exception stack trace ---
+   at System.Data.Objects.ObjectContext..ctor(EntityConnection connection, Boolean isConnectionConstructor)
+   at System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   at ForgetTraffic.DataModel.ForgetTrafficEntities..ctor() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DataModel\ForgetTrafficDataModel.Designer.cs:line 43
+   at ForgetTraffic.DAL.EntitiesManagers.GeneralManager.&lt;Initialize&gt;b__1() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EntitiesManagers\GeneralManager.cs:line 38
+   at ForgetTraffic.DAL.EFRepository.EFUnitOfWorkFactory.Create() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EFRepository\EFUnitOfWorkFactory .cs:line 39
+   at ForgetTraffic.DAL.EFRepository.UnitOfWork.get_Current() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EFRepository\UnitOfWork.cs:line 51
+   at ForgetTraffic.DAL.EntitiesManagers.GeneralManager.Dispose() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTraffic.DAL\EntitiesManagers\GeneralManager.cs:line 49
+   at ForgetTrafficTests.Autentication.AccountManagerTest.Finalize() in E:\3. I.S.E.L\ISEL 2011\Projecto\ProjectosVS\ForgetTraffic\ForgetTrafficTests.Autentication\AccountManagerTest.cs:line 192</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateUpdateProviderUserProviderTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" priority="2" id="afc8ea1b-2a52-0c03-e646-da2b450e1f64">
+      <Execution id="60b6a43b-7adf-4ae6-8840-31bf3c05cf42" />
+      <TestMethod codeBase="E:/3. I.S.E.L/ISEL 2011/Projecto/ProjectosVS/ForgetTraffic/ForgetTrafficTests.Autentication/bin/Debug/ForgetTrafficTests.Autentication.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ForgetTrafficTests.Autentication.AccountManagerTest, ForgetTrafficTests.Autentication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateUpdateProviderUserProviderTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="2.Criar Provider" id="2642ac4d-e126-486b-8ff4-00728430ab1b" parentListId="b3bfb357-bfcb-4e08-b247-8b99cc580d1a">
+      <TestLinks>
+        <TestLink id="afc8ea1b-2a52-0c03-e646-da2b450e1f64" name="CreateUpdateProviderUserProviderTest" storage="e:\3. i.s.e.l\isel 2011\projecto\projectosvs\forgettraffic\forgettraffictests.autentication\bin\debug\forgettraffictests.autentication.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestLinks>
+    </TestList>
+    <TestList name="Lista de TEste" id="b3bfb357-bfcb-4e08-b247-8b99cc580d1a" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6" />
+    <TestList name="Lists of Results" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="afc8ea1b-2a52-0c03-e646-da2b450e1f64" executionId="60b6a43b-7adf-4ae6-8840-31bf3c05cf42" testListId="2642ac4d-e126-486b-8ff4-00728430ab1b" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="60b6a43b-7adf-4ae6-8840-31bf3c05cf42" testId="afc8ea1b-2a52-0c03-e646-da2b450e1f64" testName="CreateUpdateProviderUserProviderTest" computerName="PCM-PC" duration="00:00:00.3529098" startTime="2011-05-30T21:47:21.9703138+01:00" endTime="2011-05-30T21:47:22.5513470+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="2642ac4d-e126-486b-8ff4-00728430ab1b" relativeResultsDirectory="60b6a43b-7adf-4ae6-8840-31bf3c05cf42">
+    </UnitTestResult>
+  </Results>
+</TestRun>

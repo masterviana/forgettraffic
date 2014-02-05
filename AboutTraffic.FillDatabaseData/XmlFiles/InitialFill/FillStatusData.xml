@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Content>
+
+  <status>
+    <description>Active</description>
+    <code>A</code>
+  </status>
+  <status>
+    <description>Deactivated</description>
+    <code>X</code>
+  </status>
+  <status>
+    <description>Blocked</description>
+    <code>B</code>
+  </status>
+  <status>
+    <description>Updating</description>
+    <code>U</code>
+  </status>
+
+
+</Content>

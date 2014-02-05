@@ -1,0 +1,58 @@
+﻿.Title1 {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana;
+	font-size: 28px;
+	text-align: center;
+}
+.Title2 {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana;
+	font-size: 16px;
+	text-align: center;
+}
+.footer {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana;
+	font-size: 12px;
+	background-color: #C0C0C0;
+	font-weight: bold;
+}
+.body {
+    background-color: #346687;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana;
+	width:80%; 
+	margin:10% auto;
+    bottom:0;
+    margin-top:20px;
+}
+
+.containerCss
+{
+   background-color: #88C1DE;
+}
+
+.map_canvas
+{
+    width : 800px; height : 400px; margin : 0px; padding : 0px; float : left; margin-right:0px;
+    
+}
+
+
+/* Older   
+----------------------------------------------------------*/
+
+fieldset 
+{
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #CCC;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}

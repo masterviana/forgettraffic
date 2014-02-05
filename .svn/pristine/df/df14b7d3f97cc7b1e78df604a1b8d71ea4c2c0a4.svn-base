@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="99ed404c-9ff8-4256-a834-250b7e0585a8" name="UMLClassDiagram1" linkedPackageId="ee0b66b3-f200-409f-82e6-5130ac9c68cb" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="dec51a8a-3402-4dd9-8187-4463bb77cf68">
+      <profileInstance Id="707cd370-b3ba-41d8-b1d0-b7bc27ea6f93" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f6f79a6d-2497-401e-8d21-8a7a2a19d66e">
+      <profileInstance Id="4234530d-8549-47bb-bb0f-36c5d8118500" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="856a34bb-3c28-406c-a429-7b9789aa37d2" name="IncidentItem" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="713d1c3a-321b-42ea-a7dc-53a53b67c4ef" />
+        <generalsInternal>
+          <generalization Id="943826cb-f74a-4447-9c99-ab677873488e" isSubstitutable="false">
+            <classMoniker Id="bd143d5d-8ed1-493d-a349-9d0e45d9e74e" LastKnownName="OverlyItem" />
+            <elementDefinition Id="b7d42cd2-9410-4352-9e73-eeaf6aea37c3" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="552a6f36-7007-4dfa-9b49-e4886f62385c" name="GetIncident" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f4ce59af-3e3c-4ae0-88a3-7ede8cdcc406" />
+          </operation>
+          <operation Id="066ce21e-7e09-4028-a93e-d8516f0d79a9" name="GetType" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5312d31c-956e-45e4-a911-c269a4f8ede2" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bd143d5d-8ed1-493d-a349-9d0e45d9e74e" name="OverlyItem" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2c810ba4-7941-4498-a552-0389e4946418" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ce0bb128-e697-4a88-81b1-6fcf24527ad8" name="ItemizedOverLay" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="379c902c-6459-4743-9c2e-936585e572f2" />
+        <ownedOperationsInternal>
+          <operation Id="89ea1239-21a5-43cd-83de-9f12e919b531" name="CreateItem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c9fee71c-41b2-4768-b793-f2fde4d66ed1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="292011ae-17a4-4989-a04e-1a046c4dfeed" name="int i" direction="In" isUnique="false">
+                  <elementDefinition Id="03b44290-3633-4857-8633-c07933aead20" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e58a9507-8c52-4b0d-8199-fefab26482dc" name="Size" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1ffdd27a-bee1-4470-8cc6-4945b0caf88b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0fbcf451-0033-4b20-b3fc-e0d888680c41" direction="Return" isUnique="false">
+                  <elementDefinition Id="0373e86a-d8d1-4a59-b296-f01b649a1a55" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b577337d-5f75-416d-aa46-76bedd34831a" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a3d81802-8a6c-4e14-bf68-556db3bcabdc" name="IncidentOverLay" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3296410a-3cda-433c-9281-dd82ea151904" />
+        <generalsInternal>
+          <generalization Id="90a82dfe-33df-4321-b644-3a41d2ba3382" isSubstitutable="false">
+            <classMoniker Id="ce0bb128-e697-4a88-81b1-6fcf24527ad8" LastKnownName="ItemizedOverLay" />
+            <elementDefinition Id="96cc5d8d-d4a6-4eed-84ea-d67226814239" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="92066c3f-4a01-4a1f-961b-31572a4d2bca" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="856a34bb-3c28-406c-a429-7b9789aa37d2" LastKnownName="IncidentItem" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9244a48c-d42f-48e8-9278-2550c93df2fc" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="da9ac1fe-0b3e-44e2-a84c-0b466c33b726" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="78643e2f-7abb-4830-bf95-664fce6e2bb2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="9f550267-4e5b-433b-ac81-7dbabc5cbdf6" name="Lower" value="*">
+                      <elementDefinition Id="b2747c93-49a3-4569-88d7-a633df2268e9" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="4813cf9a-8d7d-480e-b70e-a2e292abf7f9" name="Upper" value="*">
+                      <elementDefinition Id="8ed3f7f5-9b77-481d-8c91-10225e19b28f" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="6606f7fc-d6e0-4b57-a265-15f37129e0a9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bb628b82-d5b1-44df-a87b-c9a79c30ca88" />
+          </association>
+          <association Id="a499ccf3-9cdc-4ef9-a0a2-b962812c6774" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="24d6d2ea-e308-4e92-83fd-451176905233" LastKnownName="MainMap" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="79903bb9-5ad0-4901-ae06-f4442dca9914" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c3f4ac0e-8da4-4859-a3b6-630b8c648e8c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="77543911-06d6-4aab-bd77-06bd6558c00e" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="1e55a098-98f3-41dd-961f-f8dba9e65957" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6eee5599-b86d-4f6e-b621-7b033fc04fe9" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="6bd0de04-d3f7-46e0-be56-a72819319b5d" name="CreateItem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="15a0f1d0-f6e2-4d65-8250-302a193455de" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a87edbac-4e84-4ef9-8f87-006bc205898e" name="int i" direction="In" isUnique="false">
+                  <elementDefinition Id="37eac20d-1f2f-4d7f-b936-6a349943027d" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8f16c258-fec0-458a-9aca-2c3057e86e4e" name="Size" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1063babd-aa1d-4076-b640-cbf90cf75afc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6f4b335c-e427-4964-a0bd-09d2871e5330" direction="Return" isUnique="false">
+                  <elementDefinition Id="cf3a67ba-f047-42e2-9848-0b5f4b6515bc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4d36c664-4ebd-400d-b041-c744294f76c4" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="b577337d-5f75-416d-aa46-76bedd34831a" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="f182bb4c-9a34-43b0-bd02-b9544d2ff7da" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4d36c664-4ebd-400d-b041-c744294f76c4" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="f182bb4c-9a34-43b0-bd02-b9544d2ff7da" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="24d6d2ea-e308-4e92-83fd-451176905233" name="MainMap" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2e7d7c5b-ce86-432f-a9b5-8c29cc9f968c" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="ee0b66b3-f200-409f-82e6-5130ac9c68cb" name="ForgetTraffic.ModelLayer">
+    <elementDefinition Id="3d1a4293-7d2e-48fd-8a19-ec6b0156302a" />
+  </package>
+</logicalClassDesignerModel>

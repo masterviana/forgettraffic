@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerDiagram dslVersion="1.0.0.0" Id="3e496cc3-0e8f-42fb-b0c1-8600806f36cc" absoluteBounds="0, 0, 11, 8.5" name="_new_ServiceREST_LATER">
+  <layerModelMoniker Id="de18c0b2-dc99-42a8-aa36-23ad935e4ef0" />
+  <nestedChildShapes>
+    <layerShape Id="f93bd3b9-f548-4edb-8496-5a81ed428f13" absoluteBounds="2.125, 0.5, 3.5, 2.375" customColor="161, 199, 231">
+      <layerMoniker Id="1852c67f-97ab-47f5-a552-fcca8088ca50" />
+    </layerShape>
+  </nestedChildShapes>
+</layerDiagram>

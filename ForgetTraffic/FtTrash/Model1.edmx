@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl" Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="Model1TargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblConfirmActions" EntityType="Model1.tblConfirmActions" />
+          <EntitySet Name="tblPermission" EntityType="Model1.tblPermission" />
+          <EntitySet Name="tblRole" EntityType="Model1.tblRole" />
+          <EntitySet Name="tblRolePermission" EntityType="Model1.tblRolePermission" />
+          <EntitySet Name="tblSysState" EntityType="Model1.tblSysState" />
+          <EntitySet Name="tblUserRole" EntityType="Model1.tblUserRole" />
+          <EntitySet Name="tblIncidentVote" EntityType="Model1.tblIncidentVote" />
+          <EntitySet Name="tblUser" EntityType="Model1.tblUser" />
+          <EntitySet Name="tblUserProfile" EntityType="Model1.tblUserProfile" />
+          <EntitySet Name="tblTrafficOcurrence" EntityType="Model1.tblTrafficOcurrence" />
+          <EntitySet Name="tblUserProvider" EntityType="Model1.tblUserProvider" />
+          <EntitySet Name="tblValidationToken" EntityType="Model1.tblValidationToken" />
+          <AssociationSet Name="FK_tblConfirmActions_tblSysState" Association="Model1.FK_tblConfirmActions_tblSysState">
+            <End Role="tblSysState" EntitySet="tblSysState" />
+            <End Role="tblConfirmActions" EntitySet="tblConfirmActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblConfirmActions_tblUser" Association="Model1.FK_tblConfirmActions_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblConfirmActions" EntitySet="tblConfirmActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRolePermission_tblPermission" Association="Model1.FK_tblRolePermission_tblPermission">
+            <End Role="tblPermission" EntitySet="tblPermission" />
+            <End Role="tblRolePermission" EntitySet="tblRolePermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRolePermission_tblRole" Association="Model1.FK_tblRolePermission_tblRole">
+            <End Role="tblRole" EntitySet="tblRole" />
+            <End Role="tblRolePermission" EntitySet="tblRolePermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblUserRole_tblRole" Association="Model1.FK_tblUserRole_tblRole">
+            <End Role="tblRole" EntitySet="tblRole" />
+            <End Role="tblUserRole" EntitySet="tblUserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrafficOcurrence_tblSysState" Association="Model1.FK_tblTrafficOcurrence_tblSysState">
+            <End Role="tblSysState" EntitySet="tblSysState" />
+            <End Role="tblTrafficOcurrence" EntitySet="tblTrafficOcurrence" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblUserRole_tblUser" Association="Model1.FK_tblUserRole_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblUserRole" EntitySet="tblUserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblIncidentVote_tblTrafficOcurrence" Association="Model1.FK_tblIncidentVote_tblTrafficOcurrence">
+            <End Role="tblTrafficOcurrence" EntitySet="tblTrafficOcurrence" />
+            <End Role="tblIncidentVote" EntitySet="tblIncidentVote" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblIncidentVote_tblUser" Association="Model1.FK_tblIncidentVote_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblIncidentVote" EntitySet="tblIncidentVote" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrafficOcurrence_tblUser" Association="Model1.FK_tblTrafficOcurrence_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblTrafficOcurrence" EntitySet="tblTrafficOcurrence" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblUserProvider_tblUser" Association="Model1.FK_tblUserProvider_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblUserProvider" EntitySet="tblUserProvider" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblValidationToken_tblUser" Association="Model1.FK_tblValidationToken_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblValidationToken" EntitySet="tblValidationToken" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_tblUser" Association="Model1.FK_UserProfile_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblUserProfile" EntitySet="tblUserProfile" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tblConfirmActions">
+          <Key>
+            <PropertyRef Name="IdConfirmActions" />
+          </Key>
+          <Property Type="Guid" Name="IdConfirmActions" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="Token" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ValidateEndTime" Nullable="false" />
+          <Property Type="Guid" Name="ConfirmAction" Nullable="false" />
+          <Property Type="Boolean" Name="IsConfirmed" />
+          <NavigationProperty Name="tblSysState" Relationship="Model1.FK_tblConfirmActions_tblSysState" FromRole="tblConfirmActions" ToRole="tblSysState" />
+          <NavigationProperty Name="tblUser" Relationship="Model1.FK_tblConfirmActions_tblUser" FromRole="tblConfirmActions" ToRole="tblUser" />
+        </EntityType>
+        <EntityType Name="tblPermission">
+          <Key>
+            <PropertyRef Name="CodPermisson" />
+          </Key>
+          <Property Type="Guid" Name="CodPermisson" Nullable="false" />
+          <Property Type="String" Name="PermissionDescripiton" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PermissionTitle" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblRole">
+          <Key>
+            <PropertyRef Name="CodRole" />
+          </Key>
+          <Property Type="Guid" Name="CodRole" Nullable="false" />
+          <Property Type="String" Name="RoleDescription" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RoleTitle" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblRolePermission" Relationship="Model1.FK_tblRolePermission_tblRole" FromRole="tblRole" ToRole="tblRolePermission" />
+          <NavigationProperty Name="tblUserRole" Relationship="Model1.FK_tblUserRole_tblRole" FromRole="tblRole" ToRole="tblUserRole" />
+        </EntityType>
+        <EntityType Name="tblRolePermission">
+          <Key>
+            <PropertyRef Name="CodRolePermisison" />
+          </Key>
+          <Property Type="Guid" Name="CodRolePermisison" Nullable="false" />
+          <Property Type="Guid" Name="CodRole" Nullable="false" />
+          <Property Type="Guid" Name="CodPermission" Nullable="false" />
+          <NavigationProperty Name="tblPermission" Relationship="Model1.FK_tblRolePermission_tblPermission" FromRole="tblRolePermission" ToRole="tblPermission" />
+          <NavigationProperty Name="tblRole" Relationship="Model1.FK_tblRolePermission_tblRole" FromRole="tblRolePermission" ToRole="tblRole" />
+        </EntityType>
+        <EntityType Name="tblSysState">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CodeParent" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblUserRole">
+          <Key>
+            <PropertyRef Name="CodUserRole" />
+          </Key>
+          <Property Type="Guid" Name="CodUserRole" Nullable="false" />
+          <Property Type="Guid" Name="CodRole" Nullable="false" />
+          <Property Type="Guid" Name="CodUser" Nullable="false" />
+          <NavigationProperty Name="tblRole" Relationship="Model1.FK_tblUserRole_tblRole" FromRole="tblUserRole" ToRole="tblRole" />
+          <NavigationProperty Name="tblUser" Relationship="Model1.FK_tblUserRole_tblUser" FromRole="tblUserRole" ToRole="tblUser" />
+        </EntityType>
+        <EntityType Name="tblIncidentVote">
+          <Key>
+            <PropertyRef Name="VoteId" />
+          </Key>
+          <Property Type="Guid" Name="VoteId" Nullable="false" />
+          <Property Type="Guid" Name="IncidentId" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="String" Name="Comment" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="VoteType" Nullable="false" />
+          <Property Type="DateTime" Name="LastModifyDate" />
+          <NavigationProperty Name="tblTrafficOcurrence" Relationship="Model1.FK_tblIncidentVote_tblTrafficOcurrence" FromRole="tblIncidentVote" ToRole="tblTrafficOcurrence" />
+          <NavigationProperty Name="tblUser" Relationship="Model1.FK_tblIncidentVote_tblUser" FromRole="tblIncidentVote" ToRole="tblUser" />
+        </EntityType>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Image" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BirthDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecondEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblUserProfile">
+          <Key>
+            <PropertyRef Name="CodUserProfile" />
+          </Key>
+          <Property Type="Guid" Name="CodUserProfile" Nullable="false" />
+          <Property Type="Guid" Name="CodUser" Nullable="false" />
+          <Property Type="Int32" Name="SubimtIncidents" Nullable="false" />
+          <Property Type="Int32" Name="ValidateIncidents" Nullable="false" />
+          <Property Type="Int32" Name="LoginCount" Nullable="false" />
+          <Property Type="Int32" Name="ProfilePoints" Nullable="false" />
+          <Property Type="Int32" Name="VotesCount" Nullable="false" />
+          <Property Type="Boolean" Name="hiddenInformation" />
+          <NavigationProperty Name="tblUser" Relationship="Model1.FK_UserProfile_tblUser" FromRole="tblUserProfile" ToRole="tblUser" />
+        </EntityType>
+        <EntityType Name="tblTrafficOcurrence">
+          <Key>
+            <PropertyRef Name="idTrafficOccurence" />
+          </Key>
+          <Property Type="Guid" Name="idTrafficOccurence" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="Double" Name="Latitude" Nullable="false" />
+          <Property Type="Double" Name="Longitude" Nullable="false" />
+          <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="OccurrenceType" Nullable="false" />
+          <Property Type="Int32" Name="TipoGravidade" />
+          <Property Type="String" Name="Distrito" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Concelho" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Localidade" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pais" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EstimatedEndDate" />
+          <Property Type="String" Name="Title" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CodPais" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PostalCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Adress" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblSysState" Relationship="Model1.FK_tblTrafficOcurrence_tblSysState" FromRole="tblTrafficOcurrence" ToRole="tblSysState" />
+          <NavigationProperty Name="tblUser" Relationship="Model1.FK_tblTrafficOcurrence_tblUser" FromRole="tblTrafficOcurrence" ToRole="tblUser" />
+        </EntityType>
+        <EntityType Name="tblUserProvider">
+          <Key>
+            <PropertyRef Name="IdProvider" />
+          </Key>
+          <Property Type="Guid" Name="IdProvider" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="PassHash" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecretQuestion" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecretAnwser" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Islogged" Nullable="false" />
+          <Property Type="DateTime" Name="LastLoggegDate" Nullable="false" />
+          <Property Type="String" Name="IdStatus" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="PassSalt" MaxLength="200" FixedLength="false" />
+          <Property Type="Int32" Name="LoginCount" />
+          <Property Type="Int32" Name="FailedPasswordAttemptCount" />
+          <Property Type="String" Name="Comment" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblUser" Relationship="Model1.FK_tblUserProvider_tblUser" FromRole="tblUserProvider" ToRole="tblUser" />
+        </EntityType>
+        <EntityType Name="tblValidationToken">
+          <Key>
+            <PropertyRef Name="idIdentityValidation" />
+          </Key>
+          <Property Type="Guid" Name="idIdentityValidation" Nullable="false" />
+          <Property Type="DateTime" Name="AllocationDate" Nullable="false" />
+          <Property Type="String" Name="ValidationToken" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ExperitionTime" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="CommunicationCount" Nullable="false" />
+          <Property Type="String" Name="UnprocessedStringToken" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblUser" Relationship="Model1.FK_tblValidationToken_tblUser" FromRole="tblValidationToken" ToRole="tblUser" />
+        </EntityType>
+        <Association Name="FK_tblConfirmActions_tblSysState">
+          <End Type="Model1.tblSysState" Role="tblSysState" Multiplicity="1" />
+          <End Type="Model1.tblConfirmActions" Role="tblConfirmActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSysState">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblConfirmActions">
+              <PropertyRef Name="ConfirmAction" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblConfirmActions_tblUser">
+          <End Type="Model1.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="Model1.tblConfirmActions" Role="tblConfirmActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblConfirmActions">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRolePermission_tblPermission">
+          <End Type="Model1.tblPermission" Role="tblPermission" Multiplicity="1" />
+          <End Type="Model1.tblRolePermission" Role="tblRolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblPermission">
+              <PropertyRef Name="CodPermisson" />
+            </Principal>
+            <Dependent Role="tblRolePermission">
+              <PropertyRef Name="CodPermission" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRolePermission_tblRole">
+          <End Type="Model1.tblRole" Role="tblRole" Multiplicity="1" />
+          <End Type="Model1.tblRolePermission" Role="tblRolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRole">
+              <PropertyRef Name="CodRole" />
+            </Principal>
+            <Dependent Role="tblRolePermission">
+              <PropertyRef Name="CodRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblUserRole_tblRole">
+          <End Type="Model1.tblRole" Role="tblRole" Multiplicity="1" />
+          <End Type="Model1.tblUserRole" Role="tblUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRole">
+              <PropertyRef Name="CodRole" />
+            </Principal>
+            <Dependent Role="tblUserRole">
+              <PropertyRef Name="CodRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrafficOcurrence_tblSysState">
+          <End Type="Model1.tblSysState" Role="tblSysState" Multiplicity="1" />
+          <End Type="Model1.tblTrafficOcurrence" Role="tblTrafficOcurrence" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_tblUserRole_tblUser">
+          <End Type="Model1.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="Model1.tblUserRole" Role="tblUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblUserRole">
+              <PropertyRef Name="CodUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblIncidentVote_tblTrafficOcurrence">
+          <End Type="Model1.tblTrafficOcurrence" Role="tblTrafficOcurrence" Multiplicity="1" />
+          <End Type="Model1.tblIncidentVote" Role="tblIncidentVote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTrafficOcurrence">
+              <PropertyRef Name="idTrafficOccurence" />
+            </Principal>
+            <Dependent Role="tblIncidentVote">
+              <PropertyRef Name="IncidentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblIncidentVote_tblUser">
+          <End Type="Model1.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="Model1.tblIncidentVote" Role="tblIncidentVote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblIncidentVote">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrafficOcurrence_tblUser">
+          <End Type="Model1.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="Model1.tblTrafficOcurrence" Role="tblTrafficOcurrence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblTrafficOcurrence">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblUserProvider_tblUser">
+          <End Type="Model1.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="Model1.tblUserProvider" Role="tblUserProvider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblUserProvider">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblValidationToken_tblUser">
+          <End Type="Model1.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="Model1.tblValidationToken" Role="tblValidationToken" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblValidationToken">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_tblUser">
+          <End Type="Model1.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="Model1.tblUserProfile" Role="tblUserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblUserProfile">
+              <PropertyRef Name="CodUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="Model1" />
+        <Alias Key="Target" Value="Model1.Store" />
+        <EntityContainerMapping CdmEntityContainer="Model1Container" StorageEntityContainer="Model1TargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="Model1" ZoomLevel="71" >
+        <EntityTypeShape EntityType="Model1.tblConfirmActions" Width="1.5" PointX="8.7573726739535918" PointY="24.603532012833064" />
+        <EntityTypeShape EntityType="Model1.tblPermission" Width="1.5" PointX="4.6302764865710753" PointY="14.998217395971631" />
+        <EntityTypeShape EntityType="Model1.tblRole" Width="1.5" PointX="9.5356614466456975" PointY="28.446370793714362" />
+        <EntityTypeShape EntityType="Model1.tblRolePermission" Width="1.5" PointX="4.6150154828163874" PointY="17.180350877894252" />
+        <EntityTypeShape EntityType="Model1.tblSysState" Width="1.5" PointX="5.9957558708245662" PointY="23.708325859023411" />
+        <EntityTypeShape EntityType="Model1.tblUserRole" Width="1.5" PointX="9.9235185598598417" PointY="31.453665315850483" />
+        <EntityTypeShape EntityType="Model1.tblIncidentVote" Width="1.5" PointX="3.6761796975863072" PointY="6.31713597770647" />
+        <EntityTypeShape EntityType="Model1.tblUser" Width="1.5" PointX="2.4366971545092282" PointY="15.523003346995917" />
+        <EntityTypeShape EntityType="Model1.tblUserProfile" Width="1.5" PointX="7.5212904957687909" PointY="2.5173790764610184" />
+        <EntityTypeShape EntityType="Model1.tblTrafficOcurrence" Width="1.5" PointX="5.00250062393141" PointY="31.301930799755237" />
+        <EntityTypeShape EntityType="Model1.tblUserProvider" Width="1.5" PointX="10.923392850404323" PointY="4.4056775888454531" />
+        <EntityTypeShape EntityType="Model1.tblValidationToken" Width="1.5" PointX="7.5" PointY="17.625" Height="2.5571907552083353" />
+        <AssociationConnector Association="Model1.FK_tblConfirmActions_tblSysState" />
+        <AssociationConnector Association="Model1.FK_tblConfirmActions_tblUser" >
+          <ConnectorPoint PointX="3.125" PointY="18.249492187500003" />
+          <ConnectorPoint PointX="3.125" PointY="26.391337890625003" />
+          <ConnectorPoint PointX="3.4479191666666664" PointY="26.391337890625003" />
+          <ConnectorPoint PointX="3.6145858333333334" PointY="26.391337890625003" />
+          <ConnectorPoint PointX="4.166666666666667" PointY="26.391337890625003" />
+          <ConnectorPoint PointX="4.333333333333333" PointY="26.391337890625003" />
+          <ConnectorPoint PointX="6.166666666666667" PointY="26.391337890625003" />
+          <ConnectorPoint PointX="6.333333333333333" PointY="26.391337890625003" />
+          <ConnectorPoint PointX="8.75" PointY="26.391337890625003" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model1.FK_tblRolePermission_tblPermission" >
+          <ConnectorPoint PointX="5.375" PointY="16.595683593750003" />
+          <ConnectorPoint PointX="5.375" PointY="17.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model1.FK_tblRolePermission_tblRole" >
+          <ConnectorPoint PointX="10.65625" PointY="28.5" />
+          <ConnectorPoint PointX="10.65625" PointY="17.34375" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="17.34375" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="17.34375" />
+          <ConnectorPoint PointX="6.125" PointY="17.34375" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model1.FK_tblUserRole_tblRole" />
+        <AssociationConnector Association="Model1.FK_tblTrafficOcurrence_tblSysState" />
+        <AssociationConnector Association="Model1.FK_tblUserRole_tblUser" >
+          <ConnectorPoint PointX="3.875" PointY="16.860341796875" />
+          <ConnectorPoint PointX="4.166666666666667" PointY="16.860341796875" />
+          <ConnectorPoint PointX="4.333333333333333" PointY="16.860341796875" />
+          <ConnectorPoint PointX="5.291666666666667" PointY="16.860341796875" />
+          <ConnectorPoint PointX="5.458333333333333" PointY="16.860341796875" />
+          <ConnectorPoint PointX="11.21875" PointY="16.860341796875" />
+          <ConnectorPoint PointX="11.21875" PointY="31.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model1.FK_tblIncidentVote_tblTrafficOcurrence" >
+          <ConnectorPoint PointX="5" PointY="34.065754423828125" />
+          <ConnectorPoint PointX="4.25" PointY="34.065754423828125" />
+          <ConnectorPoint PointX="4.25" PointY="9.1244921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model1.FK_tblIncidentVote_tblUser" />
+        <AssociationConnector Association="Model1.FK_tblTrafficOcurrence_tblUser" >
+          <ConnectorPoint PointX="3.5312525" PointY="18.249492187500003" />
+          <ConnectorPoint PointX="3.5312525" PointY="32.338798769531259" />
+          <ConnectorPoint PointX="4.166666666666667" PointY="32.338798769531259" />
+          <ConnectorPoint PointX="4.333333333333333" PointY="32.338798769531259" />
+          <ConnectorPoint PointX="5" PointY="32.338798769531259" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model1.FK_tblUserProvider_tblUser" />
+        <AssociationConnector Association="Model1.FK_tblValidationToken_tblUser" >
+          <ConnectorPoint PointX="3.875" PointY="16.992673398437496" />
+          <ConnectorPoint PointX="4.166666666666667" PointY="16.992673398437496" />
+          <ConnectorPoint PointX="4.333333333333333" PointY="16.992673398437496" />
+          <ConnectorPoint PointX="5.291666666666667" PointY="16.992673398437496" />
+          <ConnectorPoint PointX="5.458333333333333" PointY="16.992673398437496" />
+          <ConnectorPoint PointX="8.25" PointY="16.992673398437496" />
+          <ConnectorPoint PointX="8.25" PointY="17.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model1.FK_UserProfile_tblUser" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

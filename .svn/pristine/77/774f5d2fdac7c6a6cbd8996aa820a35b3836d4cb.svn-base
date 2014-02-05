@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d7cb4b11-c424-40c2-95f4-65282adc3f01" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="d501649d-af29-42db-9bfa-4ab7bf5aea6e" name="Serviço REST">
+      <childLayers>
+        <layer Id="d6c5cad9-5e6b-4513-bd20-b227fe88b8a8" name="Serviços">
+          <childLayers>
+            <layer Id="90f01bca-8531-4864-8682-366bbdae09d7" name="Operações Utilizadores" />
+            <layer Id="b3ab0f1c-f69d-4848-b042-31b1ff7802ec" name="Operações Incidências" />
+          </childLayers>
+        </layer>
+        <layer Id="4d73c580-a4a1-4b71-bce7-8644c4562077" name="Dados">
+          <childLayers>
+            <layer Id="3c839330-8107-4d18-9aff-edc30f2c469c" name="Acesso &#xD;&#xA;Dados" />
+            <layer Id="b1251454-123f-4bc6-8f4f-9b2e4d514cf1" name="Repositório" />
+            <layer Id="578ac1d9-5d71-4fa9-969b-43a9fc45a134" name="Entidades Dominio&#xD;&#xA;" />
+          </childLayers>
+        </layer>
+        <layer Id="760b63c7-4176-4606-bab1-72c99fefc366" name="Lógica ">
+          <childLayers>
+            <layer Id="99d414b4-0b8d-44ff-abe7-ea7dd8b1a2c6" name="Gestão &#xD;&#xA;Utilizadores" />
+            <layer Id="0a334046-a599-44fd-9af2-ba30d312f509" name="Gestão&#xD;&#xA; Geoposicionamento&#xD;&#xA;" />
+            <layer Id="43697048-5908-49d7-bb39-a8d05372926e" name="Gestão&#xD;&#xA;Incidências" />
+            <layer Id="ca4022a8-c484-4fbb-a76a-a4d70946e8ef" name="Autenticação" />
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

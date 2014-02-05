@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="ForgetTraffic.RestService.Global" Language="C#" %>

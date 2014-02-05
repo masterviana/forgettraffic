@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="6c2882d6-aa44-4439-b3a9-6dd9cbf10655" name="UMLUseCaseDiagram1" linkedPackageId="4cd3559f-d2f9-4bf1-bf9b-27536bf7026e" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="a59e4396-2e86-401c-8f2b-96b135005050">
+      <profileInstance Id="1b23a745-a0c2-4661-8549-4e8b67c54a7e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="6533436f-a0fb-4b9a-8624-11553d6d4230">
+      <profileInstance Id="2509dfb1-b4b1-4d74-bb18-fad93a8bb570" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="344d86d8-226c-472d-a34d-02b7eb27a05b" name="Incidência" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="beb7397f-7ea6-471e-b9a5-b696b3c851d9" />
+        <targetEnds>
+          <association Id="0b469e02-1e6a-4dc9-af52-cd1acf563f5d" isDerived="false" sourceEndRoleName="Incidência" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d7d3ec74-c926-4216-a9ed-3031e42bff2f" LastKnownName="Activa" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="abf4a4ee-49e1-4f5c-81e9-e65251b30a72" name="Incidência" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4bee6e42-8407-4064-883c-0acef0538c5a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3e7e6e3d-70a5-4b85-b8ef-56e5bedb8fd7" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="78575d14-ac9a-4093-89b2-b7e7ae8f6c6a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ec23dd13-408f-414a-9c01-5f6a7ad18733" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d7d3ec74-c926-4216-a9ed-3031e42bff2f" name="Activa" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b255fc44-99d8-4ae9-941e-b6b6f784e0cc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="82346ae1-7a57-4509-a975-adfb62ec0e8f" name="Activa1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3c194a9c-c7b8-4c8d-bd8d-cb633728b1b4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="4cd3559f-d2f9-4bf1-bf9b-27536bf7026e" name="ForgetTraffic.ModelLayer">
+    <elementDefinition Id="3d1a4293-7d2e-48fd-8a19-ec6b0156302a" />
+  </package>
+</useCaseModelRoot>
